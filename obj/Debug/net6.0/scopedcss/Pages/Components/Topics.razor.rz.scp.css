@@ -1,0 +1,63 @@
+.content[b-n0zoxo2xcb] {
+    margin-top : 95px;
+    max-width : 1580px;
+    min-width : 
+}
+
+.title[b-n0zoxo2xcb] {
+    color: black;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.discussion-title[b-n0zoxo2xcb] {
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    margin-right : 55px;
+}
+
+.discussions-wrapper[b-n0zoxo2xcb] {
+    margin-top : 25px;
+    width : fit-content;
+}
+.discussion-card[b-n0zoxo2xcb] {    
+    padding: 60px;
+    border-radius: 7%;
+    margin-bottom : 35px;
+    height : fit-content;
+    background-color: azure;
+    border : 2px solid red;   
+}
+
+.discussion-header[b-n0zoxo2xcb] {
+    gap : 20px;
+    display : flex;
+}
+
+.topics[b-n0zoxo2xcb] {    
+    margin-left : 15px;
+    padding : 10px;
+    border-radius : 20%;
+    font-size : 18px;
+    font-weight : bolder;
+    height : fit-content;
+    width : fit-content;
+    background-color : gold;
+}
+
+.discussion-upvotes[b-n0zoxo2xcb] {
+    font-weight : bold;
+    font-size: 35px;
+    margin-left : auto;
+}
+
+.discussion-title[b-n0zoxo2xcb] {
+    color: darkorange;
+}
+
+.discussion-body[b-n0zoxo2xcb] {
+    margin-top : 25px;
+    font-size : 20px;
+    font-weight : bold;
+}

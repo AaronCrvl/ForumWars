@@ -1,0 +1,80 @@
+.trending-hashtags-wrapper[b-cnxfghmh7x] {    
+    width: auto;
+    height: max-content;     
+    margin-top : 55px;    
+}
+
+.content[b-cnxfghmh7x] {    
+    display : flex;    
+}
+
+.title[b-cnxfghmh7x] {
+    color: black;
+    font-weight: bolder;
+    font-size: 70px;
+}
+
+.trending-hashtags-row[b-cnxfghmh7x] {
+    display: flex;   
+}
+
+.move-btn[b-cnxfghmh7x] {
+    font-size: 70px;
+    color: orangered;
+    font-weight: bold;
+    margin-inline-start: 15px;
+    margin-inline-end: 15px;
+}
+    .move-btn:hover[b-cnxfghmh7x] {
+        padding: 1px;
+        cursor: pointer;
+        color : red;
+        transform :scale(1.2);
+    }
+
+.list-wrapper[b-cnxfghmh7x] {
+    gap: 85px;    
+    margin-inline-start: 15px;
+    margin-inline-end: 15px;
+    display: flex;    
+    width: stretch;    
+}
+
+body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(1)[b-cnxfghmh7x] {
+    background-color: orangered !important;            
+}
+
+body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(2)[b-cnxfghmh7x] {
+    background-color: #e5460b !important;
+}
+
+body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(3)[b-cnxfghmh7x] {
+    background-color: #cb4412 !important;
+}
+
+body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child()[b-cnxfghmh7x] {
+    background-color: #923816 !important;
+}
+
+.item-wrapper[b-cnxfghmh7x] {
+    padding: 40px;
+    width: 245px;
+    height: auto;    
+    text-align: center;
+    border-radius: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: slategrey;
+}
+    .item-wrapper:hover[b-cnxfghmh7x] {
+        cursor : pointer;
+        transition : ease-in-out 0.1s;
+        transform: scale(1.2);
+    }
+
+.item[b-cnxfghmh7x] {    
+    text-align : center;    
+    color: khaki;
+    font-size: 40px;
+    font-weight: bold;    
+}  

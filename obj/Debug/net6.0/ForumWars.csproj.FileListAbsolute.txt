@@ -29,3 +29,5 @@ C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\refint\ForumWars.dll
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\ForumWars.pdb
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\ForumWars.genruntimeconfig.cache
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\ref\ForumWars.dll
+C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Components\Topics.razor.rz.scp.css
+C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Components\TrendingHastags.razor.rz.scp.css

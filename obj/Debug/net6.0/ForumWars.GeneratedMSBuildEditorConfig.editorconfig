@@ -40,6 +40,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/aaron/source/repos/ForumWars/Pages/Components/Topics.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xUb3BpY3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-n0zoxo2xcb
+
+[C:/Users/aaron/source/repos/ForumWars/Pages/Components/TrendingHastags.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xUcmVuZGluZ0hhc3RhZ3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-cnxfghmh7x
+
 [C:/Users/aaron/source/repos/ForumWars/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-5xyxhp1lar

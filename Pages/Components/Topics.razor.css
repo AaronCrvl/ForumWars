@@ -1,0 +1,63 @@
+﻿.content {
+    margin-top : 95px;
+    max-width : 1580px;
+    min-width : 
+}
+
+.title {
+    color: black;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.discussion-title {
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    margin-right : 55px;
+}
+
+.discussions-wrapper {
+    margin-top : 25px;
+    width : fit-content;
+}
+.discussion-card {    
+    padding: 60px;
+    border-radius: 7%;
+    margin-bottom : 35px;
+    height : fit-content;
+    background-color: azure;
+    border : 2px solid red;   
+}
+
+.discussion-header {
+    gap : 20px;
+    display : flex;
+}
+
+.topics {    
+    margin-left : 15px;
+    padding : 10px;
+    border-radius : 20%;
+    font-size : 18px;
+    font-weight : bolder;
+    height : fit-content;
+    width : fit-content;
+    background-color : gold;
+}
+
+.discussion-upvotes {
+    font-weight : bold;
+    font-size: 35px;
+    margin-left : auto;
+}
+
+.discussion-title {
+    color: darkorange;
+}
+
+.discussion-body {
+    margin-top : 25px;
+    font-size : 20px;
+    font-weight : bold;
+}

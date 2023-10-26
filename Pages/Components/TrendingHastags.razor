@@ -1,0 +1,36 @@
+﻿@using ForumWars.Api;
+
+<div class="trending-hashtags-wrapper">
+    <span class="title">🔥Trending Hastags</span>
+    <div class="content">        
+        <span class="move-btn">@string.Concat("<", "")</span>
+        <div class="trending-hashtags-row">             
+            <div class="list-wrapper">
+                @foreach (var item in listView)
+                {
+                    <div class="item-wrapper">
+                        <span class="item">#@item.HashtagTitle</span>
+                    </div>
+                }
+            </div>            
+        </div>
+        <span class="move-btn">@string.Concat(">", "")</span>
+    </div>
+</div>
+
+@code {
+    List<ForumWars.Data.TrendingHastag> list, listView;
+
+    public TrendingHastags()
+    {
+        this.list = new List<ForumWars.Data.TrendingHastag>();
+        this.list = BuscarTrendingHashtags();
+        this.listView = list.Take(4).ToList<ForumWars.Data.TrendingHastag>();
+    }
+
+    List<ForumWars.Data.TrendingHastag> BuscarTrendingHashtags()
+    {
+        var api = new ForumWars.Api.HashTagsController();
+        return api.Teste().Result;        
+    }    
+}

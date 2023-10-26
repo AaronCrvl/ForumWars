@@ -1,0 +1,47 @@
+﻿@using ForumWars.Api;
+
+<div class="content">
+    <span class="title">🧧Discussions</span>    
+    <div class="discussions-wrapper">
+        @foreach (ForumWars.Data.Topic discussion in discussions)
+        {
+            <div class="discussion-card">
+                <div class="discussion-header">
+                    <span class="discussion-title">@discussion.Title</span>
+                    @if (loaded && discussion.CommunityTopics != null)
+                    {
+                        @foreach (string topic in discussion.CommunityTopics)
+                        { 
+                            <span class="topics">@topic</span>
+                        }
+                    }
+                    <span class="discussion-upvotes">🔥@discussion.UpVotes.ToString()</span>
+                </div>
+                <div class="discussion-body">
+                    @if (discussion.TopicText != null)
+                    {
+                        @discussion.TopicText;
+                    }
+                </div>
+            </div>
+        }
+    </div>    
+</div>
+
+@code {
+    List<ForumWars.Data.Topic> discussions;
+    bool loaded = false;
+
+    public Topics()
+    {
+        this.discussions = new List<ForumWars.Data.Topic>();
+        this.discussions = GetTopics();
+        this.loaded = true;
+    }
+
+    List<ForumWars.Data.Topic> GetTopics()
+    {
+        var api = new TopicsController();
+        return api.GetTopicList().Result;
+    }
+}
