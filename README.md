@@ -14,7 +14,8 @@ Este projeto **está sendo feito** utilizando a tecnologia do Blazor Server App 
 
 ## 🔥 Initial Page - (Changes coming soon)
 
-![image](https://github.com/AaronCrvl/ForumWars/assets/72924198/4b9d368a-6dba-47f1-aea8-330e34757268)
+![image](https://github.com/AaronCrvl/ForumWars/assets/72924198/3e7f970e-2303-43c7-a8e4-1d2e674bb738)
+
 
 
 ## 🔖 Figma
