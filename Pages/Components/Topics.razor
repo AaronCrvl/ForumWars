@@ -1,42 +1,45 @@
-﻿@using ForumWars.Api;
+﻿@using ForumWars.Controllers;
 
 <div class="content">
-    <span class="title">🧧Discussions</span>    
+    <span class="title">🧧Discussions</span>
     <div class="discussions-wrapper">
-        @foreach (ForumWars.Data.Topic discussion in discussions)
+        @if (discussions == null)
         {
-            <div class="discussion-card">
-                <div class="discussion-header">
-                    <span class="discussion-title">@discussion.Title</span>
-                    @if (loaded && discussion.CommunityTopics != null)
-                    {
-                        @foreach (string topic in discussion.CommunityTopics)
-                        { 
-                            <span class="topics">@topic</span>
-                        }
-                    }
-                    <span class="discussion-upvotes">🔥@discussion.UpVotes.ToString()</span>
-                </div>
-                <div class="discussion-body">
-                    @if (discussion.TopicText != null)
-                    {
-                        @discussion.TopicText;
-                    }
-                </div>
+            <div class="spinner-wrapper">
+                <div class="spinner"></div>
             </div>
         }
-    </div>    
+        else
+        {
+            @foreach (ForumWars.Data.Topic discussion in discussions)
+            {
+                <div class="discussion-card">
+                    <div class="discussion-header">
+                        <span class="discussion-title">@discussion.Title</span>
+                        @foreach (string topic in discussion.CommunityTopics)
+                        {
+                            <span class="topics">@topic</span>
+                        }
+                        <span class="discussion-upvotes">🔥@discussion.UpVotes.ToString()</span>
+                    </div>
+                    <div class="discussion-body">
+                        @if (discussion.TopicText != null)
+                        {
+                            @discussion.TopicText;
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
 </div>
 
 @code {
-    List<ForumWars.Data.Topic> discussions;
-    bool loaded = false;
+    List<ForumWars.Data.Topic>? discussions;
 
     public Topics()
     {
-        this.discussions = new List<ForumWars.Data.Topic>();
         this.discussions = GetTopics();
-        this.loaded = true;
     }
 
     List<ForumWars.Data.Topic> GetTopics()

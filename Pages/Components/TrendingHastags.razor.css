@@ -1,11 +1,11 @@
-﻿.trending-hashtags-wrapper {    
+﻿.trending-hashtags-wrapper {
     width: auto;
-    height: max-content;     
-    margin-top : 55px;    
+    height: max-content;
+    margin-top: 55px;
 }
 
-.content {    
-    display : flex;    
+.content {
+    display: flex;
 }
 
 .title {
@@ -15,7 +15,9 @@
 }
 
 .trending-hashtags-row {
-    display: flex;   
+    display: flex;
+    overflow-x: hidden;
+    padding: 10px;
 }
 
 .move-btn {
@@ -25,23 +27,24 @@
     margin-inline-start: 15px;
     margin-inline-end: 15px;
 }
+
     .move-btn:hover {
         padding: 1px;
         cursor: pointer;
-        color : red;
-        transform :scale(1.2);
+        color: red;
+        transform: scale(1.2);
     }
 
 .list-wrapper {
-    gap: 85px;    
+    gap: 85px;
     margin-inline-start: 15px;
     margin-inline-end: 15px;
-    display: flex;    
-    width: stretch;    
+    display: flex;
+    width: stretch;
 }
 
 body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(1) {
-    background-color: orangered !important;            
+    background-color: orangered !important;
 }
 
 body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(2) {
@@ -52,29 +55,65 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     background-color: #cb4412 !important;
 }
 
-body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child() {
+body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(4) {
     background-color: #923816 !important;
 }
 
 .item-wrapper {
+    display: block;
     padding: 40px;
     width: 245px;
-    height: auto;    
+    height: auto;
     text-align: center;
     border-radius: 10%;
     margin-top: auto;
     margin-bottom: auto;
     background-color: slategrey;
+    scroll-behavior: smooth;
 }
+
     .item-wrapper:hover {
-        cursor : pointer;
-        transition : ease-in-out 0.1s;
+        cursor: pointer;
+        transition: ease-in-out 0.1s;
         transform: scale(1.2);
     }
 
-.item {    
-    text-align : center;    
+.item {
+    text-align: center;
     color: khaki;
     font-size: 40px;
-    font-weight: bold;    
-}  
+    font-weight: bold;
+}
+
+@keyframes fadeAway {
+    0% {
+        transition: ease-in-out;
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0%;
+    }
+}
+
+@-moz-keyframes fadeAway {
+    0% {
+        transition: ease-in-out;
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0%;
+    }
+}
+
+@-webkit-keyframes fadeAway {
+    0% {
+        transition: ease-in-out;
+    }
+
+    100% {
+        transform: scale(0.5);
+        opacity: 0%;
+    }
+}

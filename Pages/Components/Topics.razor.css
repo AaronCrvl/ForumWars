@@ -1,7 +1,6 @@
 ﻿.content {
     margin-top : 95px;
-    max-width : 1580px;
-    min-width : 
+    max-width : 1580px;    
 }
 
 .title {
@@ -23,11 +22,10 @@
 }
 .discussion-card {    
     padding: 60px;
-    border-radius: 7%;
+    border-radius: 1%;
     margin-bottom : 35px;
     height : fit-content;
-    background-color: azure;
-    border : 2px solid red;   
+    background-color: lightgoldenrodyellow;
 }
 
 .discussion-header {

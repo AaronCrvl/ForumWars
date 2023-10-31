@@ -1,0 +1,72 @@
+﻿.topic-page-wrapper {
+    height: auto;
+    width: 100%;
+    color: black;
+}
+
+.topic-id {
+    font-size : xx-large;
+}
+
+.topic-wrapper {
+    padding: 10px;
+}
+
+.topic-title-wrapper {
+    display: flex;
+    padding: 5px;
+}
+
+.topic-title {
+    font-size: xx-large;    
+    font-weight: bold;
+}
+
+.topics {
+    margin-left: 35px;
+}
+
+.topic-topics {
+    background-color: crimson;
+    color: white;
+}
+
+.topic-text {
+    padding: 2px;
+    font-size: larger;    
+}
+
+.user-comment-section-wrapper {
+    display: flex;
+    height: 120px;
+    width: 240px
+}
+
+.comments-wrapper {
+    height: auto;
+    width: 350px;
+}
+
+.comment-wrapper {
+    padding: 2px;
+    width: 150px;
+}
+
+.comment-header-wrapper {
+    display: flex;
+}
+
+.comment-username {
+    font-size: larger;
+}
+
+.comment-creation-date {
+    font-size: larger;
+    margin-left: auto;
+}
+
+.comment-text {
+    padding: 5px;
+    margin-top: 50px;
+    width: 150px;
+}

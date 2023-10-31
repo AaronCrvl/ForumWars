@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection.Metadata.Ecma335;
 
-namespace ForumWars.Api
+namespace ForumWars.Controllers
 {
     public class HashTagsController : Controller
     {
@@ -12,9 +12,9 @@ namespace ForumWars.Api
 
         }
 
-        public async Task<List<TrendingHastag>> Teste()
+        public Task<List<TrendingHastag>> GetHashtags()
         {        
-            return new List<TrendingHastag>
+            return Task.FromResult(new List<TrendingHastag>
             {
                 new TrendingHastag { CreationDate = DateTime.Now, HashtagTitle = "Design" },
                 new TrendingHastag { CreationDate = DateTime.Now, HashtagTitle = "Food" },
@@ -27,7 +27,7 @@ namespace ForumWars.Api
                 new TrendingHastag { CreationDate = DateTime.Now, HashtagTitle = "Microsoft" },
                 new TrendingHastag { CreationDate = DateTime.Now, HashtagTitle = "Github" },
                 new TrendingHastag { CreationDate = DateTime.Now, HashtagTitle = "AI" },
-            };
+            });
         }
     }
 }

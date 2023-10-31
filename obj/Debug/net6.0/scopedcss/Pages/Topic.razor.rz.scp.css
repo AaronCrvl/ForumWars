@@ -1,0 +1,72 @@
+.topic-page-wrapper[b-t0n9l0emv3] {
+    height: auto;
+    width: 100%;
+    color: black;
+}
+
+.topic-id[b-t0n9l0emv3] {
+    font-size : xx-large;
+}
+
+.topic-wrapper[b-t0n9l0emv3] {
+    padding: 10px;
+}
+
+.topic-title-wrapper[b-t0n9l0emv3] {
+    display: flex;
+    padding: 5px;
+}
+
+.topic-title[b-t0n9l0emv3] {
+    font-size: xx-large;    
+    font-weight: bold;
+}
+
+.topics[b-t0n9l0emv3] {
+    margin-left: 35px;
+}
+
+.topic-topics[b-t0n9l0emv3] {
+    background-color: crimson;
+    color: white;
+}
+
+.topic-text[b-t0n9l0emv3] {
+    padding: 2px;
+    font-size: larger;    
+}
+
+.user-comment-section-wrapper[b-t0n9l0emv3] {
+    display: flex;
+    height: 120px;
+    width: 240px
+}
+
+.comments-wrapper[b-t0n9l0emv3] {
+    height: auto;
+    width: 350px;
+}
+
+.comment-wrapper[b-t0n9l0emv3] {
+    padding: 2px;
+    width: 150px;
+}
+
+.comment-header-wrapper[b-t0n9l0emv3] {
+    display: flex;
+}
+
+.comment-username[b-t0n9l0emv3] {
+    font-size: larger;
+}
+
+.comment-creation-date[b-t0n9l0emv3] {
+    font-size: larger;
+    margin-left: auto;
+}
+
+.comment-text[b-t0n9l0emv3] {
+    padding: 5px;
+    margin-top: 50px;
+    width: 150px;
+}

@@ -1,7 +1,6 @@
 .content[b-n0zoxo2xcb] {
     margin-top : 95px;
-    max-width : 1580px;
-    min-width : 
+    max-width : 1580px;    
 }
 
 .title[b-n0zoxo2xcb] {
@@ -23,11 +22,10 @@
 }
 .discussion-card[b-n0zoxo2xcb] {    
     padding: 60px;
-    border-radius: 7%;
+    border-radius: 1%;
     margin-bottom : 35px;
     height : fit-content;
-    background-color: azure;
-    border : 2px solid red;   
+    background-color: lightgoldenrodyellow;
 }
 
 .discussion-header[b-n0zoxo2xcb] {

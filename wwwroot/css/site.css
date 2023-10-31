@@ -8,6 +8,23 @@ html, body {
     font-family: 'Kanit', sans-serif;
 }
 
+.spinner-wrapper {
+    justify-items: center;
+    align-items: center;
+    padding: 50px;
+    width: stretch;
+    height: stretch;
+}
+
+.spinner {
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    border-top: 12px dotted red;
+    border-bottom: 12px dotted red;
+    animation: spin 2s infinite;
+}
+
 h1:focus {
     outline: none;
 }
@@ -66,3 +83,31 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+
+@keyframes spin {
+    0% {
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    0% {
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

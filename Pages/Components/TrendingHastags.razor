@@ -1,36 +1,87 @@
-﻿@using ForumWars.Api;
+﻿@using ForumWars.Controllers;
 
-<div class="trending-hashtags-wrapper">
-    <span class="title">🔥Trending Hastags</span>
-    <div class="content">        
-        <span class="move-btn">@string.Concat("<", "")</span>
-        <div class="trending-hashtags-row">             
-            <div class="list-wrapper">
-                @foreach (var item in listView)
-                {
-                    <div class="item-wrapper">
-                        <span class="item">#@item.HashtagTitle</span>
-                    </div>
+<script>
+    const divs = document.getElementsByClassName("item-wrapper");
+
+    function RightScrollAnimaton() {
+        document.getElementsByClassName("list-wrapper")[0].style.animation = 'fadeAway 0.5s linear';
+
+        let count = IdentifyIndex();
+        setTimeout(() => {
+            if ((count - divs.length) > 3) {
+                for (count; count <= 3; count++) {
+                    divs[count].style.display = 'none';
                 }
-            </div>            
+            }
+            document.getElementsByClassName("list-wrapper")[0].style.animation = 'none';
+        }, 300)
+
+    }
+
+    function LeftScrollAnimaton() {
+        document.getElementsByClassName("list-wrapper")[0].style.animation = 'fadeAway 0.5s linear';
+
+        let count = IdentifyIndex();
+        setTimeout(() => {
+            for (count; count >= 0; count--) {
+                divs[count].style.display = 'block';
+            }
+            document.getElementsByClassName("list-wrapper")[0].style.animation = 'none';
+        }, 300)
+    }
+
+    function IdentifyIndex() {
+        for (let count = 0; count < divs.length; count++) {
+            if (divs[count].style.display !== 'none') {
+                return count;
+            }
+        }
+    }
+</script>
+<div class="trending-hashtags-wrapper">
+    @if (list == null)
+    {
+        <div class="spinner-wrapper">
+            <div class="spinner"></div>
         </div>
-        <span class="move-btn">@string.Concat(">", "")</span>
-    </div>
+    }
+    else
+    {
+        <span class="title">🔥Trending Hastags</span>
+        <div class="content">
+            <span class="move-btn"
+                  onclick="LeftScrollAnimaton()">
+                @string.Concat("<", "")
+            </span>
+            <div class="trending-hashtags-row">
+                <div class="list-wrapper">
+                    @foreach (var item in list)
+                    {
+                        <div class="item-wrapper">
+                            <span class="item">#@item.HashtagTitle</span>
+                        </div>
+                    }
+                </div>
+            </div>
+            <span class="move-btn"
+                  onclick="RightScrollAnimaton()">
+                @string.Concat(">", "")
+            </span>
+        </div>
+    }
 </div>
 
 @code {
-    List<ForumWars.Data.TrendingHastag> list, listView;
+    List<ForumWars.Data.TrendingHastag>? list;
 
     public TrendingHastags()
     {
-        this.list = new List<ForumWars.Data.TrendingHastag>();
         this.list = BuscarTrendingHashtags();
-        this.listView = list.Take(4).ToList<ForumWars.Data.TrendingHastag>();
     }
 
     List<ForumWars.Data.TrendingHastag> BuscarTrendingHashtags()
     {
-        var api = new ForumWars.Api.HashTagsController();
-        return api.Teste().Result;        
-    }    
+        var api = new ForumWars.Controllers.HashTagsController();
+        return api.GetHashtags().Result;
+    }
 }
