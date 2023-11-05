@@ -7,6 +7,10 @@ html {
     width: 100%;
 }
 
+.page.dark-theme {
+    background-color: black;
+}
+
 .content-wrapper {
     padding: 10px;
     margin-left: 280px;

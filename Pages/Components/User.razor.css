@@ -1,0 +1,15 @@
+.user-info--wrapper {
+    display: flex;
+    padding : 2px;
+    text-allign: left;    
+}
+
+.user-icon {
+    width: 5px;
+    height:5px;
+}
+
+.user-username {
+    font-size: 5px;
+    font-weight: bold;
+}

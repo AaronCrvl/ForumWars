@@ -1,14 +1,31 @@
-﻿<div class="nav-wrapper">
+﻿@using ForumWars.Pages.Components
+
+<script>
+    function chnageTheme() {                    
+        document.body.classList.toggle("dark-theme");        
+    }
+</script>
+<div class="nav-wrapper">
     <div class="nav-title">
         <span class="nav-title-text">ForumWars</span>
-        <span class="nav-title-bomb">💣</span>
+        <span class="nav-title-bomb">💣</span>        
     </div>
     <nav class="nav">
+        <span class="nav-theme-control" onClick="chnageTheme">@icon</span>
         <div class="nav-option">New Discussion</div>
         <div class="nav-option">Github</div>
     </nav>    
+    <div clas="user-area">
+        <User></User>    
+    </div>
 </div>
 
 @code {
-        
+    string icon;
+    SessionController session;    
+            
+    protected override void OnInitialized(){
+        session = new SessionController();
+        icon = session.GetSessionTheme().ToLower() == "light" ? "Moon Emoji" : "Sun Emoji";
+    }    
 }

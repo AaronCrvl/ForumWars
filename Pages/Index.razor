@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using ForumWars.Pages.Components
+@using ForumWars.Controllers
 
 <div>
     <PageTitle>Forum Wars</PageTitle>
@@ -8,5 +9,10 @@
 </div>
 
 @code {
-    
+    SessionController session;
+
+    protected override void OnInitialized()
+    {
+        sesions = new SessionController();
+    }  
 }

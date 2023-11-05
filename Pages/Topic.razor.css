@@ -4,6 +4,10 @@
     color: black;
 }
 
+.topic-page-wrapper.dark-theme { 
+    color : white;    
+}
+
 .topic-id {
     font-size : xx-large;
 }
@@ -29,6 +33,11 @@
 .topic-topics {
     background-color: crimson;
     color: white;
+}
+
+.topic-topics.dark-theme {
+    background-color: lightgreen;
+    color: black;
 }
 
 .topic-text {

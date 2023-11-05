@@ -9,11 +9,19 @@
     font-size: 70px;
 }
 
+.title.dark-theme {
+    color : white;
+}
+
 .discussion-title {
     color: black;
     font-weight: bold;
     font-size: 50px;
     margin-right : 55px;
+}
+
+.discussion-title.dark-theme {
+    color: white;
 }
 
 .discussions-wrapper {
@@ -52,6 +60,10 @@
 
 .discussion-title {
     color: darkorange;
+}
+
+.discussion-title.dark-theme {
+    color: purple;
 }
 
 .discussion-body {
