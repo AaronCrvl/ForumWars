@@ -4,12 +4,18 @@
     color: black;
 }
 
+    .topic-page-wrapper.dark-theme[b-t0n9l0emv3] {
+        color: white;
+    }
+
 .topic-id[b-t0n9l0emv3] {
-    font-size : xx-large;
+    font-size: xx-large;
+    transition: ease-in-out;
+    animation: topicAnimation-b-t0n9l0emv3 infinite ease-in-out;
 }
 
 .topic-wrapper[b-t0n9l0emv3] {
-    padding: 10px;
+    padding: 6px;
 }
 
 .topic-title-wrapper[b-t0n9l0emv3] {
@@ -18,55 +24,88 @@
 }
 
 .topic-title[b-t0n9l0emv3] {
-    font-size: xx-large;    
+    font-size: 80px;
     font-weight: bold;
+    padding: 10px;
 }
 
 .topics[b-t0n9l0emv3] {
     margin-left: 35px;
+    display: flex;
+    gap: 10px;
 }
 
 .topic-topics[b-t0n9l0emv3] {
-    background-color: crimson;
     color: white;
+    background-color: red;
+    height: fit-content;
+    border: 4px;
+    padding: 10px;
+    border-radius: 15%;
 }
 
+    .topic-topics.dark-theme[b-t0n9l0emv3] {
+        background-color: lightgreen;
+        color: black;
+    }
+
 .topic-text[b-t0n9l0emv3] {
-    padding: 2px;
-    font-size: larger;    
+    padding: 6px;
+    font-size: larger;
 }
 
 .user-comment-section-wrapper[b-t0n9l0emv3] {
+    margin-top: 15px;
     display: flex;
+    flex: 1;
+    width: 900px;
     height: 120px;
-    width: 240px
 }
+
+.user-comment[b-t0n9l0emv3] {
+    display: flex;
+    flex: 1;
+    height: 50px;
+    width: 900px;
+    border-radius: 5%;
+    border: 4px thin black;
+}
+
+.send-comment-btn[b-t0n9l0emv3] {
+    margin-left: 5px;
+    color: white;
+    height: 50px;
+    background-color: #0094ff;
+    border-radius: 5%;
+    border: 2px thin;
+}
+
+    .send-comment-btn:hover[b-t0n9l0emv3] {
+        transform: scale(1.1)
+    }
 
 .comments-wrapper[b-t0n9l0emv3] {
     height: auto;
-    width: 350px;
+    width: auto;
+    overflow-y: scroll;
 }
 
-.comment-wrapper[b-t0n9l0emv3] {
-    padding: 2px;
-    width: 150px;
-}
+/*Animations*/
+@keyframes topicAnimation-b-t0n9l0emv3 {
+    0% {
+        color: #ff0000;
+        transform: rotate(360deg)
+    }
 
-.comment-header-wrapper[b-t0n9l0emv3] {
-    display: flex;
-}
+    20% {
+        color: #ff6a00
+    }
 
-.comment-username[b-t0n9l0emv3] {
-    font-size: larger;
-}
+    60% {
+        color: #ffd800
+    }
 
-.comment-creation-date[b-t0n9l0emv3] {
-    font-size: larger;
-    margin-left: auto;
-}
-
-.comment-text[b-t0n9l0emv3] {
-    padding: 5px;
-    margin-top: 50px;
-    width: 150px;
+    100% {
+        color: #000000
+    }
 }

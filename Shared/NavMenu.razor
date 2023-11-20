@@ -1,17 +1,22 @@
 ﻿@using ForumWars.Pages.Components
 
-<script>
-    function chnageTheme() {                    
-        document.body.classList.toggle("dark-theme");        
+<script>      
+    const setIcon = () => document.getElementsByClassName("theme-icon")[0].innerHTML = localStorage.getItem("theme") === "dark" ? "🌑" : "🌞";
+
+    function changeTheme() {
+        var theme = localStorage.getItem("theme") === "dark" ? "light" : "dark";        
+        document.body.classList.remove('light', 'dark');
+        document.body.classList.add(theme);        
+        setIcon()
     }
 </script>
 <div class="nav-wrapper">
     <div class="nav-title">
         <span class="nav-title-text">ForumWars</span>
         <span class="nav-title-bomb">💣</span>        
+        <span class="nav-theme-control" onclick="changeTheme()" onload="setIcon()"><span class="theme-icon">Theme</span></span>
     </div>
-    <nav class="nav">
-        <span class="nav-theme-control" onClick="chnageTheme">@icon</span>
+    <nav class="nav">        
         <div class="nav-option">New Discussion</div>
         <div class="nav-option">Github</div>
     </nav>    
@@ -19,13 +24,3 @@
         <User></User>    
     </div>
 </div>
-
-@code {
-    string icon;
-    SessionController session;    
-            
-    protected override void OnInitialized(){
-        session = new SessionController();
-        icon = session.GetSessionTheme().ToLower() == "light" ? "Moon Emoji" : "Sun Emoji";
-    }    
-}

@@ -1,0 +1,15 @@
+.user-info--wrapper[b-q4ow3f1kko] {
+    display: flex;
+    padding : 2px;
+    text-allign: left;    
+}
+
+.user-icon[b-q4ow3f1kko] {
+    width: 5px;
+    height:5px;
+}
+
+.user-username[b-q4ow3f1kko] {
+    font-size: 5px;
+    font-weight: bold;
+}

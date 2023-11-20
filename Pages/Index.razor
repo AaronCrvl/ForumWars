@@ -2,17 +2,21 @@
 @using ForumWars.Pages.Components
 @using ForumWars.Controllers
 
+<script>
+    function StartSession(){
+        localStorage.setItem("theme", "black");
+    }
+</script>
 <div>
     <PageTitle>Forum Wars</PageTitle>
     <TrendingHastags></TrendingHastags>
-    <Topics></Topics>
+    <TopicPreview></TopicPreview>
 </div>
 
 @code {
     SessionController session;
-
     protected override void OnInitialized()
     {
-        sesions = new SessionController();
+        session = new SessionController();        
     }  
 }

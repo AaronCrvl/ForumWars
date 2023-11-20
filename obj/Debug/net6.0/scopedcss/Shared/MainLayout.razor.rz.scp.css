@@ -7,6 +7,10 @@ html[b-5xyxhp1lar] {
     width: 100%;
 }
 
+.page.dark-theme[b-5xyxhp1lar] {
+    background-color: black;
+}
+
 .content-wrapper[b-5xyxhp1lar] {
     padding: 10px;
     margin-left: 280px;

@@ -1,4 +1,5 @@
-﻿@page "/topic/{idTopic}"
+﻿@page "/topic/"
+@using ForumWars.Pages.Components
 
 <div class="topic-page-wrapper">
     <div class="topic-id">#@idTopic</div>
@@ -25,25 +26,20 @@
 
         <div class="user-comment-section-wrapper">
             <input class="user-comment" type="text" placeholder="Leave a comment on this topic.👻" />
+            <button class="send-comment-btn" onclick="">Send Comment</button>
         </div>
 
         <div class="comments-wrapper">
             @foreach (var item in comments)
             {
-                <div class="comment-wrapper">
-                    <div class="comment-header-wrapper">
-                        <div class="comment-username">@item.Username</div>
-                        <div class="comment-creation-date">@item.CreatedDate</div>
-                    </div>
-                    <div class="comment-text">@item.CommentText</div>
-                </div>
+                <TopicComment UserCommentProps=item></TopicComment>
             }
         </div>
-    }    
+    }
 </div>
 
-@code {
-    [Parameter]
+@code {   
+    //[Parameter]
     public int idTopic { get; set; }
 
     public ForumWars.Data.Topic? topic;
@@ -51,7 +47,7 @@
 
     protected override void OnInitialized()
     {
-        idTopic = idTopic <= -1 ? 0 : idTopic;
+        idTopic = 1;
         topic = new ForumWars.Controllers.TopicsController().GetTopic(idTopic).Result;
         comments = new ForumWars.Controllers.TopicsController().GetTopicComments(idTopic).Result;
     }

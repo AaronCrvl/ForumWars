@@ -1,26 +1,34 @@
-.content[b-n0zoxo2xcb] {
+.content[b-bhvzlr5gl0] {
     margin-top : 95px;
     max-width : 1580px;    
 }
 
-.title[b-n0zoxo2xcb] {
+.title[b-bhvzlr5gl0] {
     color: black;
     font-weight: bold;
     font-size: 70px;
 }
 
-.discussion-title[b-n0zoxo2xcb] {
+.title.dark-theme[b-bhvzlr5gl0] {
+    color : white;
+}
+
+.discussion-title[b-bhvzlr5gl0] {
     color: black;
     font-weight: bold;
     font-size: 50px;
     margin-right : 55px;
 }
 
-.discussions-wrapper[b-n0zoxo2xcb] {
+.discussion-title.dark-theme[b-bhvzlr5gl0] {
+    color: white;
+}
+
+.discussions-wrapper[b-bhvzlr5gl0] {
     margin-top : 25px;
     width : fit-content;
 }
-.discussion-card[b-n0zoxo2xcb] {    
+.discussion-card[b-bhvzlr5gl0] {    
     padding: 60px;
     border-radius: 1%;
     margin-bottom : 35px;
@@ -28,12 +36,12 @@
     background-color: lightgoldenrodyellow;
 }
 
-.discussion-header[b-n0zoxo2xcb] {
+.discussion-header[b-bhvzlr5gl0] {
     gap : 20px;
     display : flex;
 }
 
-.topics[b-n0zoxo2xcb] {    
+.topics[b-bhvzlr5gl0] {    
     margin-left : 15px;
     padding : 10px;
     border-radius : 20%;
@@ -44,17 +52,21 @@
     background-color : gold;
 }
 
-.discussion-upvotes[b-n0zoxo2xcb] {
+.discussion-upvotes[b-bhvzlr5gl0] {
     font-weight : bold;
     font-size: 35px;
     margin-left : auto;
 }
 
-.discussion-title[b-n0zoxo2xcb] {
+.discussion-title[b-bhvzlr5gl0] {
     color: darkorange;
 }
 
-.discussion-body[b-n0zoxo2xcb] {
+.discussion-title.dark-theme[b-bhvzlr5gl0] {
+    color: purple;
+}
+
+.discussion-body[b-bhvzlr5gl0] {
     margin-top : 25px;
     font-size : 20px;
     font-weight : bold;

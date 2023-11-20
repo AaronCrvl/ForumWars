@@ -1,0 +1,37 @@
+﻿@using ForumWars.Data
+
+<div class="comment-wrapper">
+    <div class="comment-header-wrapper">
+        <div class="comment-username">@UserComment.Username</div>
+        <div class="comment-creation-date">@UserComment.CreatedDate</div>
+    </div>
+    <div class="comment-text">@UserComment.CommentText</div>
+    <div class="comment-interaction">
+        <span class="like-int">👍</span>
+        <span class="dislike-int">👎</span>
+        <button class="comment-int" @onclick=handleSubCommentBox>Create Comment</button>
+        @if(openSubComment)
+        {
+            <div class="sub-comment-wrapper">
+                <input class="sub-comment-input" type="text" placeholder="Leave a comment on this topic.👻" />
+                <button class="sub-comment-btn">Send</button>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private bool openSubComment = false;
+    private Comment UserComment = new Comment();
+    public void handleSubCommentBox() => openSubComment = !openSubComment;
+
+    [Parameter]
+    public Comment UserCommentProps { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        if (UserCommentProps != null)
+            UserComment = UserCommentProps;
+    }
+}
