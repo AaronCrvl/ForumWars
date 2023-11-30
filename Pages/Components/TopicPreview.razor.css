@@ -1,6 +1,6 @@
 ﻿.content {
-    margin-top : 95px;
-    max-width : 1580px;    
+    margin-top: 95px;
+    max-width: 1580px;
 }
 
 .title {
@@ -9,65 +9,72 @@
     font-size: 70px;
 }
 
-.title.dark-theme {
-    color : white;
-}
+    .title.dark-theme {
+        color: white;
+    }
 
 .discussion-title {
     color: black;
     font-weight: bold;
     font-size: 50px;
-    margin-right : 55px;
+    margin-right: 55px;
 }
 
-.discussion-title.dark-theme {
-    color: white;
-}
+    .discussion-title.dark-theme {
+        color: white;
+    }
 
 .discussions-wrapper {
-    margin-top : 25px;
-    width : fit-content;
+    margin-top: 25px;
+    width: fit-content;
 }
-.discussion-card {    
+
+.discussion-card {
     padding: 60px;
     border-radius: 1%;
-    margin-bottom : 35px;
-    height : fit-content;
+    margin-bottom: 35px;
+    height: fit-content;
     background-color: lightgoldenrodyellow;
 }
 
+    .discussion-card:hover {
+        cursor: pointer;
+        transition: ease-in-out;
+        transform: scale(1.1);
+    }
+
 .discussion-header {
-    gap : 20px;
-    display : flex;
+    gap: 20px;
+    display: flex;
 }
 
-.topics {    
-    margin-left : 15px;
-    padding : 10px;
-    border-radius : 20%;
-    font-size : 18px;
-    font-weight : bolder;
-    height : fit-content;
-    width : fit-content;
-    background-color : gold;
+.topics {
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 20%;
+    font-size: 18px;
+    font-weight: bolder;
+    height: fit-content;
+    width: fit-content;
+    background-color: gold;
 }
 
 .discussion-upvotes {
-    font-weight : bold;
+    font-weight: bold;
     font-size: 35px;
-    margin-left : auto;
+    margin-left: auto;
 }
 
 .discussion-title {
     color: darkorange;
 }
 
-.discussion-title.dark-theme {
-    color: purple;
-}
+    .discussion-title.dark-theme {
+        color: purple;
+    }
 
 .discussion-body {
-    margin-top : 25px;
-    font-size : 20px;
-    font-weight : bold;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
 }

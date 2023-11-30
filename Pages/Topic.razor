@@ -1,8 +1,7 @@
-﻿@page "/topic/"
+﻿@page "/topic/{idTopic}"
 @using ForumWars.Pages.Components
 
-<div class="topic-page-wrapper">
-    <div class="topic-id">#@idTopic</div>
+<div class="topic-page-wrapper">    
     @if (topic == null && comments == null)
     {
         <div class="spinner-wrapper">
@@ -11,8 +10,9 @@
     }
     else
     {
-        <div class="topic-wrapper">
+        <div class="topic-wrapper">            
             <div class="topic-title-wrapper">
+                <div class="topic-id">#@idTopic.</div>
                 <div class="topic-title">@topic.Title</div>
                 <div class="topics">
                     @foreach (var item in topic.CommunityTopics)
@@ -24,31 +24,33 @@
             <p class="topic-text">@topic.TopicText</p>
         </div>
 
-        <div class="user-comment-section-wrapper">
-            <input class="user-comment" type="text" placeholder="Leave a comment on this topic.👻" />
-            <button class="send-comment-btn" onclick="">Send Comment</button>
-        </div>
+        <div class="comment-section">
+            <span class="comments-section-title">Comments Section</span>
+            <div class="user-comment-section-wrapper">
+                <input class="user-comment" type="text" placeholder="Leave a comment on this topic.👻" />
+                <button class="send-comment-btn" onclick="">Send Comment</button>
+            </div>
 
-        <div class="comments-wrapper">
-            @foreach (var item in comments)
-            {
-                <TopicComment UserCommentProps=item></TopicComment>
-            }
+            <div class="comments-wrapper">
+                @foreach (var item in comments)
+                {
+                    <TopicComment UserCommentProps=item></TopicComment>
+                }
+            </div>
         </div>
     }
 </div>
 
 @code {   
-    //[Parameter]
-    public int idTopic { get; set; }
+    [Parameter]
+    public string idTopic { get; set; }
 
     public ForumWars.Data.Topic? topic;
     public List<ForumWars.Data.Comment>? comments;
 
     protected override void OnInitialized()
-    {
-        idTopic = 1;
-        topic = new ForumWars.Controllers.TopicsController().GetTopic(idTopic).Result;
-        comments = new ForumWars.Controllers.TopicsController().GetTopicComments(idTopic).Result;
+    {        
+        topic = new ForumWars.Controllers.TopicsController().GetTopic(int.Parse(idTopic)).Result;
+        comments = new ForumWars.Controllers.TopicsController().GetTopicComments(int.Parse(idTopic)).Result;
     }
 }

@@ -9,24 +9,23 @@
     }
 
 .topic-id[b-t0n9l0emv3] {
-    font-size: xx-large;
-    transition: ease-in-out;
-    animation: topicAnimation-b-t0n9l0emv3 infinite ease-in-out;
+    font-size: 80px;
+    font-weight: bold;    
 }
 
 .topic-wrapper[b-t0n9l0emv3] {
-    padding: 6px;
+    padding: 76px;
+    border-radius: 5%;
+    background-color: whitesmoke;
 }
 
 .topic-title-wrapper[b-t0n9l0emv3] {
-    display: flex;
-    padding: 5px;
+    display: flex;    
 }
 
 .topic-title[b-t0n9l0emv3] {
     font-size: 80px;
-    font-weight: bold;
-    padding: 10px;
+    font-weight: bold;    
 }
 
 .topics[b-t0n9l0emv3] {
@@ -44,14 +43,22 @@
     border-radius: 15%;
 }
 
-    .topic-topics.dark-theme[b-t0n9l0emv3] {
-        background-color: lightgreen;
-        color: black;
-    }
-
 .topic-text[b-t0n9l0emv3] {
     padding: 6px;
     font-size: larger;
+}
+
+.comment-section[b-t0n9l0emv3] {
+    margin-top: 15px;
+    padding : 76px;    
+    border-radius: 5%;
+    background-color: whitesmoke;
+}
+
+.comments-section-title[b-t0n9l0emv3] {
+    color: gray;
+    font-size: 60px;
+    font-weight: bold;
 }
 
 .user-comment-section-wrapper[b-t0n9l0emv3] {
@@ -67,8 +74,7 @@
     flex: 1;
     height: 50px;
     width: 900px;
-    border-radius: 5%;
-    border: 4px thin black;
+    border-radius: 2%;
 }
 
 .send-comment-btn[b-t0n9l0emv3] {
@@ -85,9 +91,11 @@
     }
 
 .comments-wrapper[b-t0n9l0emv3] {
+    padding: 20px;
     height: auto;
     width: auto;
     overflow-y: scroll;
+    grid-row-gap: 25px;
 }
 
 /*Animations*/

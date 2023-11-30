@@ -1,15 +1,16 @@
 /* _content/ForumWars/Pages/Components/TopicComment.razor.rz.scp.css */
 .comment-wrapper[b-6xxti71bud] {
     padding: 12px;
-    width: max-content;
+    width: fit-content;
     height: auto;
     border-radius: 3%;
     background-color: khaki;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .comment-header-wrapper[b-6xxti71bud] {
     display: flex;
+    margin-bottom: 20px;
 }
 
 .comment-username[b-6xxti71bud] {
@@ -24,13 +25,12 @@
 .comment-text[b-6xxti71bud] {
     display: flex;
     padding: 5px;
-    height: 40px;
+    height: 40px;    
 }
 
 .comment-interaction[b-6xxti71bud] {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
+    margin-top: 35px;
+    display: flex;    
 }
 
 .like-int[b-6xxti71bud] {
@@ -67,8 +67,8 @@
 }
 /* _content/ForumWars/Pages/Components/TopicPreview.razor.rz.scp.css */
 .content[b-bhvzlr5gl0] {
-    margin-top : 95px;
-    max-width : 1580px;    
+    margin-top: 95px;
+    max-width: 1580px;
 }
 
 .title[b-bhvzlr5gl0] {
@@ -77,67 +77,74 @@
     font-size: 70px;
 }
 
-.title.dark-theme[b-bhvzlr5gl0] {
-    color : white;
-}
+    .title.dark-theme[b-bhvzlr5gl0] {
+        color: white;
+    }
 
 .discussion-title[b-bhvzlr5gl0] {
     color: black;
     font-weight: bold;
     font-size: 50px;
-    margin-right : 55px;
+    margin-right: 55px;
 }
 
-.discussion-title.dark-theme[b-bhvzlr5gl0] {
-    color: white;
-}
+    .discussion-title.dark-theme[b-bhvzlr5gl0] {
+        color: white;
+    }
 
 .discussions-wrapper[b-bhvzlr5gl0] {
-    margin-top : 25px;
-    width : fit-content;
+    margin-top: 25px;
+    width: fit-content;
 }
-.discussion-card[b-bhvzlr5gl0] {    
+
+.discussion-card[b-bhvzlr5gl0] {
     padding: 60px;
     border-radius: 1%;
-    margin-bottom : 35px;
-    height : fit-content;
+    margin-bottom: 35px;
+    height: fit-content;
     background-color: lightgoldenrodyellow;
 }
 
+    .discussion-card:hover[b-bhvzlr5gl0] {
+        cursor: pointer;
+        transition: ease-in-out;
+        transform: scale(1.1);
+    }
+
 .discussion-header[b-bhvzlr5gl0] {
-    gap : 20px;
-    display : flex;
+    gap: 20px;
+    display: flex;
 }
 
-.topics[b-bhvzlr5gl0] {    
-    margin-left : 15px;
-    padding : 10px;
-    border-radius : 20%;
-    font-size : 18px;
-    font-weight : bolder;
-    height : fit-content;
-    width : fit-content;
-    background-color : gold;
+.topics[b-bhvzlr5gl0] {
+    margin-left: 15px;
+    padding: 10px;
+    border-radius: 20%;
+    font-size: 18px;
+    font-weight: bolder;
+    height: fit-content;
+    width: fit-content;
+    background-color: gold;
 }
 
 .discussion-upvotes[b-bhvzlr5gl0] {
-    font-weight : bold;
+    font-weight: bold;
     font-size: 35px;
-    margin-left : auto;
+    margin-left: auto;
 }
 
 .discussion-title[b-bhvzlr5gl0] {
     color: darkorange;
 }
 
-.discussion-title.dark-theme[b-bhvzlr5gl0] {
-    color: purple;
-}
+    .discussion-title.dark-theme[b-bhvzlr5gl0] {
+        color: purple;
+    }
 
 .discussion-body[b-bhvzlr5gl0] {
-    margin-top : 25px;
-    font-size : 20px;
-    font-weight : bold;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
 }
 /* _content/ForumWars/Pages/Components/TrendingHastags.razor.rz.scp.css */
 .trending-hashtags-wrapper[b-cnxfghmh7x] {
@@ -236,6 +243,7 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     margin-bottom: auto;
     background-color: slategrey;
     scroll-behavior: smooth;
+    animation: slide-in-b-cnxfghmh7x 2s forwards;
 }
 
     .item-wrapper:hover[b-cnxfghmh7x] {
@@ -287,6 +295,46 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
         opacity: 0%;
     }
 }
+
+@keyframes slide-in-b-cnxfghmh7x {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out-b-cnxfghmh7x {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(0%);
+    }
+
+    100% {
+        -webkit-transform: translateX(100%);
+    }
+}
 /* _content/ForumWars/Pages/Components/User.razor.rz.scp.css */
 .user-info--wrapper[b-q4ow3f1kko] {
     display: flex;
@@ -315,24 +363,23 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     }
 
 .topic-id[b-t0n9l0emv3] {
-    font-size: xx-large;
-    transition: ease-in-out;
-    animation: topicAnimation-b-t0n9l0emv3 infinite ease-in-out;
+    font-size: 80px;
+    font-weight: bold;    
 }
 
 .topic-wrapper[b-t0n9l0emv3] {
-    padding: 6px;
+    padding: 76px;
+    border-radius: 5%;
+    background-color: whitesmoke;
 }
 
 .topic-title-wrapper[b-t0n9l0emv3] {
-    display: flex;
-    padding: 5px;
+    display: flex;    
 }
 
 .topic-title[b-t0n9l0emv3] {
     font-size: 80px;
-    font-weight: bold;
-    padding: 10px;
+    font-weight: bold;    
 }
 
 .topics[b-t0n9l0emv3] {
@@ -350,14 +397,22 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     border-radius: 15%;
 }
 
-    .topic-topics.dark-theme[b-t0n9l0emv3] {
-        background-color: lightgreen;
-        color: black;
-    }
-
 .topic-text[b-t0n9l0emv3] {
     padding: 6px;
     font-size: larger;
+}
+
+.comment-section[b-t0n9l0emv3] {
+    margin-top: 15px;
+    padding : 76px;    
+    border-radius: 5%;
+    background-color: whitesmoke;
+}
+
+.comments-section-title[b-t0n9l0emv3] {
+    color: gray;
+    font-size: 60px;
+    font-weight: bold;
 }
 
 .user-comment-section-wrapper[b-t0n9l0emv3] {
@@ -373,8 +428,7 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     flex: 1;
     height: 50px;
     width: 900px;
-    border-radius: 5%;
-    border: 4px thin black;
+    border-radius: 2%;
 }
 
 .send-comment-btn[b-t0n9l0emv3] {
@@ -391,9 +445,11 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     }
 
 .comments-wrapper[b-t0n9l0emv3] {
+    padding: 20px;
     height: auto;
     width: auto;
     overflow-y: scroll;
+    grid-row-gap: 25px;
 }
 
 /*Animations*/

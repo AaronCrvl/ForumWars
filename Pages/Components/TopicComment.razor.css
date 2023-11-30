@@ -1,14 +1,15 @@
 ﻿.comment-wrapper {
     padding: 12px;
-    width: max-content;
+    width: fit-content;
     height: auto;
     border-radius: 3%;
     background-color: khaki;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .comment-header-wrapper {
     display: flex;
+    margin-bottom: 20px;
 }
 
 .comment-username {
@@ -23,13 +24,12 @@
 .comment-text {
     display: flex;
     padding: 5px;
-    height: 40px;
+    height: 40px;    
 }
 
 .comment-interaction {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
+    margin-top: 35px;
+    display: flex;    
 }
 
 .like-int {

@@ -1,4 +1,5 @@
 ﻿@using ForumWars.Controllers;
+@inject NavigationManager NavManager
 
 <script>
     () => {
@@ -22,7 +23,7 @@
         {
             @foreach (ForumWars.Data.Topic discussion in discussions)
             {
-                <div class="discussion-card">
+                <div class="discussion-card" @onclick="() => RedirectToDiscussionPage(discussion.Id)">
                     <div class="discussion-header">
                         <span class="discussion-title">@discussion.Title</span>
                         @foreach (string topic in discussion.CommunityTopics)
@@ -56,5 +57,10 @@
     {
         var api = new TopicsController();
         return api.GetTopicList().Result;
+    }
+
+    public void RedirectToDiscussionPage(long idTopic)
+    {        
+        NavManager.NavigateTo($"/topic/{idTopic}") ;
     }
 }

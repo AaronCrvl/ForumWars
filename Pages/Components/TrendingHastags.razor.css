@@ -94,6 +94,7 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     margin-bottom: auto;
     background-color: slategrey;
     scroll-behavior: smooth;
+    animation: slide-in 2s forwards;
 }
 
     .item-wrapper:hover {
@@ -143,5 +144,45 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     100% {
         transform: scale(0.5);
         opacity: 0%;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@-webkit-keyframes slide-out {
+    0% {
+        -webkit-transform: translateX(0%);
+    }
+
+    100% {
+        -webkit-transform: translateX(100%);
     }
 }

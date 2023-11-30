@@ -1,41 +1,25 @@
 ﻿@using ForumWars.Controllers;
 
-<script>
-    const divs = document.getElementsByClassName("item-wrapper");
+<script>        
+    let position = 0
+    const divs = document.getElementsByClassName("item-wrapper")
 
-    function RightScrollAnimaton() {
-        document.getElementsByClassName("list-wrapper")[0].style.animation = 'fadeAway 0.5s linear';
-
-        let count = IdentifyIndex();
-        setTimeout(() => {
-            if ((count - divs.length) > 3) {
-                for (count; count <= 3; count++) {
-                    divs[count].style.display = 'none';
-                }
-            }
-            document.getElementsByClassName("list-wrapper")[0].style.animation = 'none';
-        }, 300)
-
+    function HorizontalSlideRight() {            
+        for (let i = position === 0 ? 0 : position; i < 4; ++i) {
+            divs[i].style.animation = "slide-out 1s forwards"
+            divs[i].style.display = "none"            
+            ++position;            
+        }                
     }
 
-    function LeftScrollAnimaton() {
-        document.getElementsByClassName("list-wrapper")[0].style.animation = 'fadeAway 0.5s linear';
-
-        let count = IdentifyIndex();
-        setTimeout(() => {
-            for (count; count >= 0; count--) {
-                divs[count].style.display = 'block';
+    function HorizontalSlideLeft() {        
+        if (position > 4) {
+            for (let i = 4; i >= 0; --i) {        
+                --position;
+                divs[i].style.animation = "slide-in 1s forwards"
+                divs[position].style.display = "block"                
             }
-            document.getElementsByClassName("list-wrapper")[0].style.animation = 'none';
-        }, 300)
-    }
-
-    function IdentifyIndex() {
-        for (let count = 0; count < divs.length; count++) {
-            if (divs[count].style.display !== 'none') {
-                return count;
-            }
-        }
+        }        
     }
 </script>
 <div class="trending-hashtags-wrapper">
@@ -49,22 +33,20 @@
     {
         <span class="title">🔥Trending Hastags</span>
         <div class="content">
-            <span class="move-btn"
-                  onclick="LeftScrollAnimaton()">
+            <span class="move-btn" onclick="HorizontalSlideLeft()">
                 @string.Concat("<", "")
             </span>
             <div class="trending-hashtags-row">
                 <div class="list-wrapper">
                     @foreach (var item in list)
-                    {
+                    {                        
                         <div class="item-wrapper">
                             <span class="item">#@item.HashtagTitle</span>
-                        </div>
+                        </div>                        
                     }
                 </div>
             </div>
-            <span class="move-btn"
-                  onclick="RightScrollAnimaton()">
+            <span class="move-btn" onclick="HorizontalSlideRight()">
                 @string.Concat(">", "")
             </span>
         </div>
