@@ -351,6 +351,12 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     font-size: 5px;
     font-weight: bold;
 }
+/* _content/ForumWars/Pages/Search.razor.rz.scp.css */
+.page-wrapper[b-f5vv66fie5] {
+    height: auto;
+    width: 100%;
+    color: black;
+}
 /* _content/ForumWars/Pages/Topic.razor.rz.scp.css */
 .topic-page-wrapper[b-t0n9l0emv3] {
     height: auto;
@@ -502,16 +508,14 @@ html[b-5xyxhp1lar] {
     background-color: orangered;
 }
 
-.nav-title[b-nqkq92omyw] { 
+.nav-title[b-nqkq92omyw] {
     cursor: pointer;
 }
 
-.nav-title:hover[b-nqkq92omyw] {
-    
-}
+    .nav-title:hover[b-nqkq92omyw] {
+    }
 
 .nav-title-bomb[b-nqkq92omyw] {
-
 }
 
 .nav[b-nqkq92omyw] {
@@ -528,18 +532,22 @@ html[b-5xyxhp1lar] {
     text-decoration: none;
 }
 
+    .nav-option:hover[b-nqkq92omyw] {
+        cursor: pointer;
+    }
+
 .nav-link:hover[b-nqkq92omyw] {
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .user-area[b-nqkq92omyw] {
     margin-left: auto;
-    padding: 2px;    
+    padding: 2px;
 }
 
 /*Animations*/
 @keyframes bombAnimation-b-nqkq92omyw {
-    0% {        
+    0% {
     }
 }
 

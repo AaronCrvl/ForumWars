@@ -1,9 +1,48 @@
 ﻿@page "/search/"
+@using ForumWars.Controllers
 
-<div>
+<div class="page-wrapper">
+    <div>
+        <span>Search for topics or discussions</span>
+        <input type="text" placeholder="type a hashtag ou keyword🕸" @bind="@CurrentValue" @oninput="@((e) => { CurrentValue=(string)e.Value; HandleSearch(); })" />
+    </div>
 
+    <div>
+        <span>Results</span>
+        <div>
+            @if (searchResult.Count <= 0)
+            {
+                <div class="spinner-wrapper">
+                    <div class="spinner"></div>
+                </div>
+            }
+            else
+            {
+                @foreach (ForumWars.Data.Topic topic in searchResult)
+                {
+                    <div>
+                        <span>@DateTime.UtcNow.ToShortDateString()</span>
+                        <span>@topic.Title</span>
+                        <div>
+                            @foreach (var item in topic.CommunityTopics)
+                            {
+                                <div>@item</div>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
 </div>
 
 @code {
+    private string CurrentValue { get; set; } = "";
+    private ForumWars.Controllers.TopicsController cTopic = new TopicsController();
+    private List<ForumWars.Data.Topic>? searchResult = new List<ForumWars.Data.Topic>();
 
+    private void HandleSearch()
+    {        
+        searchResult = cTopic.SearchInTopicList(CurrentValue).Result;
+    }
 }

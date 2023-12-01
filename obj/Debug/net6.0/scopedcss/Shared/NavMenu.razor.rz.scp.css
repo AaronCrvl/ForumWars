@@ -9,16 +9,14 @@
     background-color: orangered;
 }
 
-.nav-title[b-nqkq92omyw] { 
+.nav-title[b-nqkq92omyw] {
     cursor: pointer;
 }
 
-.nav-title:hover[b-nqkq92omyw] {
-    
-}
+    .nav-title:hover[b-nqkq92omyw] {
+    }
 
 .nav-title-bomb[b-nqkq92omyw] {
-
 }
 
 .nav[b-nqkq92omyw] {
@@ -35,18 +33,22 @@
     text-decoration: none;
 }
 
+    .nav-option:hover[b-nqkq92omyw] {
+        cursor: pointer;
+    }
+
 .nav-link:hover[b-nqkq92omyw] {
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .user-area[b-nqkq92omyw] {
     margin-left: auto;
-    padding: 2px;    
+    padding: 2px;
 }
 
 /*Animations*/
 @keyframes bombAnimation-b-nqkq92omyw {
-    0% {        
+    0% {
     }
 }
 

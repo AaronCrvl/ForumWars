@@ -22,8 +22,8 @@
         <span class="nav-title-bomb">💣</span>
     </div>
     <nav class="nav">
-        <div class="nav-option">Search</div>
-        <div class="nav-option">New Discussion</div>
+        <div class="nav-option" @onclick=RedirectToSearchPage>Search</div>
+        <div class="nav-option">Open New Discussion</div>
         <div class="nav-option">Github</div>
     </nav>
     <div clas="user-area">
@@ -35,5 +35,10 @@
     public void RedirectToHomePage()
     {
         NavManager.NavigateTo("/");
+    }
+
+    public void RedirectToSearchPage()
+    {
+        NavManager.NavigateTo("/search");
     }
 }

@@ -24,10 +24,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/aaron/source/repos/ForumWars/Pages/Search.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhcmNoLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/aaron/source/repos/ForumWars/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -47,6 +43,10 @@ build_metadata.AdditionalFiles.CssScope = b-cnxfghmh7x
 [C:/Users/aaron/source/repos/ForumWars/Pages/Components/User.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xVc2VyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-q4ow3f1kko
+
+[C:/Users/aaron/source/repos/ForumWars/Pages/Search.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VhcmNoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-f5vv66fie5
 
 [C:/Users/aaron/source/repos/ForumWars/Pages/Topic.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9waWMucmF6b3I=

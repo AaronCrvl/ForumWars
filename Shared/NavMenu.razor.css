@@ -9,16 +9,14 @@
     background-color: orangered;
 }
 
-.nav-title { 
+.nav-title {
     cursor: pointer;
 }
 
-.nav-title:hover {
-    
-}
+    .nav-title:hover {
+    }
 
 .nav-title-bomb {
-
 }
 
 .nav {
@@ -35,18 +33,22 @@
     text-decoration: none;
 }
 
+    .nav-option:hover {
+        cursor: pointer;
+    }
+
 .nav-link:hover {
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .user-area {
     margin-left: auto;
-    padding: 2px;    
+    padding: 2px;
 }
 
 /*Animations*/
 @keyframes bombAnimation {
-    0% {        
+    0% {
     }
 }
 

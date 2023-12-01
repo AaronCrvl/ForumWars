@@ -34,3 +34,4 @@ C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Topic.raz
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Components\User.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Components\TopicComment.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Components\TopicPreview.razor.rz.scp.css
+C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Search.razor.rz.scp.css
