@@ -1,15 +1,33 @@
-.user-info--wrapper {
+.user-info-wrapper {
     display: flex;
-    padding : 2px;
-    text-allign: left;    
 }
 
-.user-icon {
-    width: 5px;
-    height:5px;
+.user-wrapper {
+    padding: 7px;
+    border-radius: 100%;
+    height: max-content;
+    width: max-content;
 }
 
-.user-username {
-    font-size: 5px;
-    font-weight: bold;
+    .user-wrapper:hover {
+        background-color: darkkhaki;
+        cursor: pointer;
+    }
+
+.user-head {
+    height: 14px;
+    width: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    border: white 2px thick;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.user-body {
+    height: 24px;
+    width: 30px;
+    border: white 2px thick;
+    border-radius: 70%;
+    background-color: white;
 }

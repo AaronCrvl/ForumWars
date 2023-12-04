@@ -2,19 +2,6 @@
 @inject NavigationManager NavManager
 
 <script>
-    function setIcon() {
-        document.getElementsByClassName("theme-icon")[0].innerHTML = localStorage.getItem("theme") === "dark" ? "🌑" : "🌞";
-    }
-
-    function changeTheme() {
-        console.log("teste aceso ao método");
-        var theme = localStorage.getItem("theme") === "dark" ? "light" : "dark";
-        document.body.classList.remove('light', 'dark');
-        document.body.classList.add(theme);
-        setIcon()
-    }
-
-    () => setIcon();
 </script>
 <div class="nav-wrapper">
     <div class="nav-title" @onclick=RedirectToHomePage>

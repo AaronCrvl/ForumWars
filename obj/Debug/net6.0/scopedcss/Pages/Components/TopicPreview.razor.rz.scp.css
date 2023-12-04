@@ -63,6 +63,8 @@
     font-weight: bold;
     font-size: 35px;
     margin-left: auto;
+    transition: ease;
+    animation: fireShake-b-bhvzlr5gl0 4s backwards infinite;
 }
 
 .discussion-title[b-bhvzlr5gl0] {
@@ -77,4 +79,59 @@
     margin-top: 25px;
     font-size: 20px;
     font-weight: bold;
+}
+
+
+@keyframes fireShake-b-bhvzlr5gl0 {
+    0% {
+        transform: rotate(25deg)
+    }
+
+    25% {
+        transform: rotate(-25deg)
+    }
+
+    50% {
+        transform: rotate(25deg)
+    }
+
+    100% {
+        transform: rotate(-25deg)
+    }
+}
+
+@-moz-keyframes fireShake {
+    0% {
+        transform: rotate(25deg)
+    }
+
+    25% {
+        transform: rotate(-25deg)
+    }
+
+    50% {
+        transform: rotate(25deg)
+    }
+
+    100% {
+        transform: rotate(-25deg)
+    }
+}
+
+@-webkit-keyframes fireShake {
+    0% {
+        transform: rotate(25deg)
+    }
+
+    25% {
+        transform: rotate(-25deg)
+    }
+
+    50% {
+        transform: rotate(25deg)
+    }
+
+    100% {
+        transform: rotate(-25deg)
+    }
 }

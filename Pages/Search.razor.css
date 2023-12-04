@@ -3,3 +3,59 @@
     width: 100%;
     color: black;
 }
+
+.content-wrapper {
+    padding: 10px;
+}
+
+.page-title {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.user-interaction-wrapper {
+    margin-top: 15px;
+}
+
+.search-box-wrapper {
+    flex: 1;
+    padding: 15px;
+    border-radius: 2%;
+    background-color: whitesmoke;
+}
+
+.text-input {
+    padding: 15px;
+    border-radius: 2%;
+}
+
+.input-btn {
+    padding: 15px;
+    color: white;
+    border: deepskyblue 2px solid;
+    border-radius: 2%;
+    background-color: deepskyblue;
+}
+
+    .input-btn :hover {
+        transform: scale(1.3);
+    }
+
+.results-wrapper {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 2%;
+    background-color: whitesmoke;
+}
+
+.search-item {
+    flex: 1;
+    background-color: darkkhaki;
+    border-radius: 2%;
+}
+
+.discussion-topics {
+    display: flex;
+    width: min-content;
+    height: min-content;
+}

@@ -1,15 +1,33 @@
-.user-info--wrapper[b-q4ow3f1kko] {
+.user-info-wrapper[b-q4ow3f1kko] {
     display: flex;
-    padding : 2px;
-    text-allign: left;    
 }
 
-.user-icon[b-q4ow3f1kko] {
-    width: 5px;
-    height:5px;
+.user-wrapper[b-q4ow3f1kko] {
+    padding: 7px;
+    border-radius: 100%;
+    height: max-content;
+    width: max-content;
 }
 
-.user-username[b-q4ow3f1kko] {
-    font-size: 5px;
-    font-weight: bold;
+    .user-wrapper:hover[b-q4ow3f1kko] {
+        background-color: darkkhaki;
+        cursor: pointer;
+    }
+
+.user-head[b-q4ow3f1kko] {
+    height: 14px;
+    width: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    border: white 2px thick;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.user-body[b-q4ow3f1kko] {
+    height: 24px;
+    width: 30px;
+    border: white 2px thick;
+    border-radius: 70%;
+    background-color: white;
 }

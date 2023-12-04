@@ -13,8 +13,8 @@
     }
 
     function HorizontalSlideLeft() {        
-        if (position > 4) {
-            for (let i = 4; i >= 0; --i) {        
+        if (position >= 3) {
+            for (let i = 3; i >= 0; --i) {        
                 --position;
                 divs[i].style.animation = "slide-in 1s forwards"
                 divs[position].style.display = "block"                
