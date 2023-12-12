@@ -1,0 +1,17 @@
+.topic-page-wrapper[b-0243gdpe19] {
+    height: stretch;
+    flex-direction: row;
+    flex: 1;
+    width: 100%;
+    color: black;
+}
+
+    .topic-page-wrapper.dark-theme[b-0243gdpe19] {
+        color: white;
+    }
+
+.topic-wrapper[b-0243gdpe19] {
+    padding: 76px;
+    border-radius: 5%;
+    background-color: whitesmoke;
+}

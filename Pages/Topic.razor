@@ -1,7 +1,7 @@
 ﻿@page "/topic/{idTopic}"
 @using ForumWars.Pages.Components
 
-<div class="topic-page-wrapper">    
+<div class="topic-page-wrapper">
     @if (topic == null && comments == null)
     {
         <div class="spinner-wrapper">
@@ -10,14 +10,21 @@
     }
     else
     {
-        <div class="topic-wrapper">            
+        <div class="topic-wrapper">
             <div class="topic-title-wrapper">
                 <div class="topic-id">#@idTopic.</div>
                 <div class="topic-title">@topic.Title</div>
                 <div class="topics">
-                    @foreach (var item in topic.CommunityTopics)
+                    @if (topic.CommunityTopics == null)
                     {
-                        <div class="topic-topics">@item</div>
+                        <span>No Community Topics for this Discussion.</span>
+                    }
+                    else
+                    {
+                        @foreach (var item in topic.CommunityTopics)
+                        {
+                            <div class="topic-topics">@item</div>
+                        }
                     }
                 </div>
             </div>
@@ -41,15 +48,15 @@
     }
 </div>
 
-@code {   
+@code {
     [Parameter]
     public string idTopic { get; set; }
-
+ 
     public ForumWars.Data.Topic? topic;
     public List<ForumWars.Data.Comment>? comments;
 
     protected override void OnInitialized()
-    {        
+    {
         topic = new ForumWars.Controllers.TopicsController().GetTopic(int.Parse(idTopic)).Result;
         comments = new ForumWars.Controllers.TopicsController().GetTopicComments(int.Parse(idTopic)).Result;
     }

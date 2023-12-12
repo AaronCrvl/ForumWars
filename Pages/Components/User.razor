@@ -1,11 +1,19 @@
 @using ForumWars.Controllers;
-<div class="user-info-wrapper">     
+@inject NavigationManager NavManager;
+
+<div class="user-info-wrapper" @onclick="() => RedirectToUserPage(0)">
     <div class="user-wrapper">        
         <div class="user-head"></div>
         <div class="user-body"></div>
     </div>
 </div>
 
-@code {
-    SessionController session = new SessionController();
+@code { 
+    // dependenci inversion
+    // SessionController session = new SessionController();
+
+    public void RedirectToUserPage(int idUser)
+    {
+        NavManager.NavigateTo($"/user/{idUser}");
+    }
 }

@@ -1,4 +1,4 @@
-.nav-wrapper {
+﻿.nav-wrapper {
     flex: 1;
     color: white;
     display: flex;
@@ -7,6 +7,7 @@
     font-size: x-large;
     background-color: red;
     background-color: orangered;
+    cursor: default;
 }
 
 .nav-title {
@@ -17,8 +18,6 @@
     }
 
 .nav-title-bomb {
-    transition: ease;
-    animation: bombMove 1s linear infinite;
 }
 
 .nav {
@@ -46,36 +45,4 @@
 .user-area {
     margin-left: auto;
     padding: 2px;
-}
-
-/* --------------------------! Animations !-------------------------- */
-/* --------------------------! Bomb Move !-------------------------- */
-@keyframes bombMove {
-    0% {
-        transform: scale(1.5);
-    }
-
-    100% {
-        transform: scale(1.0);
-    }
-}
-
-@-moz-keyframes bombMove {
-    0% {
-        transform: scale(1.5);
-    }
-
-    100% {
-        transform: scale(1.0);
-    }
-}
-
-@-webkit-keyframes bombMove {
-    0% {
-        transform: scale(1.5);
-    }
-
-    100% {
-        transform: scale(1.0);
-    }
 }

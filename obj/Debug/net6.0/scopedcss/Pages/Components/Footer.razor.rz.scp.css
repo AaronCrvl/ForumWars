@@ -1,0 +1,48 @@
+.nav-wrapper[b-0ka4gf6zg8] {
+    flex: 1;
+    color: white;
+    display: flex;
+    padding: 20px;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: red;
+    background-color: orangered;
+    cursor: default;
+}
+
+.nav-title[b-0ka4gf6zg8] {
+    cursor: pointer;
+}
+
+    .nav-title:hover[b-0ka4gf6zg8] {
+    }
+
+.nav-title-bomb[b-0ka4gf6zg8] {
+}
+
+.nav[b-0ka4gf6zg8] {
+    flex: 1;
+    color: white;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-option[b-0ka4gf6zg8] {
+    margin-right: 45px;
+    text-align: center;
+    text-decoration: none;
+}
+
+    .nav-option:hover[b-0ka4gf6zg8] {
+        cursor: pointer;
+    }
+
+.nav-link:hover[b-0ka4gf6zg8] {
+    cursor: pointer;
+}
+
+.user-area[b-0ka4gf6zg8] {
+    margin-left: auto;
+    padding: 2px;
+}

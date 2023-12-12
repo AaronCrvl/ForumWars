@@ -26,9 +26,16 @@
                 <div class="discussion-card" @onclick="() => RedirectToDiscussionPage(discussion.Id)">
                     <div class="discussion-header">
                         <span class="discussion-title">@discussion.Title</span>
-                        @foreach (string topic in discussion.CommunityTopics)
+                        @if (discussion.CommunityTopics == null)
                         {
-                            <span class="topics">@topic</span>
+                            <span>No Community Topics for this Discussion.</span>
+                        }
+                        else
+                        {
+                            @foreach (string topic in discussion.CommunityTopics)
+                            {
+                                <span class="topics">@topic</span>
+                            }
                         }
                         <span class="discussion-upvotes">🔥@discussion.UpVotes.ToString()</span>
                     </div>
@@ -60,7 +67,7 @@
     }
 
     public void RedirectToDiscussionPage(long idTopic)
-    {        
-        NavManager.NavigateTo($"/topic/{idTopic}") ;
+    {
+        NavManager.NavigateTo($"/topic/{idTopic}");
     }
 }

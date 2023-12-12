@@ -6,17 +6,24 @@
 
 .content {
     display: flex;
+    transition: ease-out 0.5s;
+    opacity: 35%;
 }
+
+    .content:hover {
+        opacity: 100%;
+    }
 
 .title {
     color: black;
     font-weight: bolder;
     font-size: 70px;
+    cursor: default;
 }
 
-.title.dark-theme {
-    color : white;
-}
+    .title.dark-theme {
+        color: white;
+    }
 
 .trending-hashtags-row {
     display: flex;
@@ -29,18 +36,18 @@
     color: orangered;
     font-weight: bold;
     margin-inline-start: 15px;
-    margin-inline-end: 15px;
+    margin-inline-end: 15px;    
 }
 
-.move-btn.dark-theme {
-    color : #096BFF;
-}
+    .move-btn.dark-theme {
+        color: #096BFF;
+    }
 
     .move-btn:hover {
         padding: 1px;
         cursor: pointer;
         color: red;
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
 .list-wrapper {
@@ -55,33 +62,33 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     background-color: orangered !important;
 }
 
-body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(1).dark-theme {
-    background-color: #C41CFF !important;
-}
+    body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(1).dark-theme {
+        background-color: #C41CFF !important;
+    }
 
 body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(2) {
     background-color: #e5460b !important;
 }
 
-body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(2).dark-theme {
-    background-color: #A42CCE !important;
-}
+    body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(2).dark-theme {
+        background-color: #A42CCE !important;
+    }
 
 body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(3) {
     background-color: #cb4412 !important;
 }
 
-body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(3).dark-theme {
-    background-color: #8A32A9 !important;
-}
+    body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(3).dark-theme {
+        background-color: #8A32A9 !important;
+    }
 
 body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(4) {
     background-color: #923816 !important;
 }
 
-body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(4).dark-theme {
-    background-color: #782A94 !important;
-}
+    body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-child(4).dark-theme {
+        background-color: #782A94 !important;
+    }
 
 .item-wrapper {
     display: block;
@@ -110,10 +117,12 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     font-weight: bold;
 }
 
-.item.dark-theme {
-    color: #9FFEF8;
-}
+    .item.dark-theme {
+        color: #9FFEF8;
+    }
 
+/* --------------------------! Animations !-------------------------- */
+/* -------------------------- Fade Away -------------------------- */
 @keyframes fadeAway {
     0% {
         transition: ease-in-out;
@@ -147,6 +156,7 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     }
 }
 
+/* -------------------------- Slide In -------------------------- */
 @keyframes slide-in {
     0% {
         -webkit-transform: translateX(100%);
@@ -167,6 +177,8 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     }
 }
 
+/* -------------------------- Slide Out -------------------------- */
+
 @keyframes slide-out {
     0% {
         transform: translateX(0%);
@@ -185,4 +197,20 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     100% {
         -webkit-transform: translateX(100%);
     }
+}
+
+/* -------------------------- Interaction -------------------------- */
+@keyframes name {
+    from {
+    }
+
+    to {
+        background: yellow;
+    }
+}
+
+@-moz-keyframes name {
+}
+
+@-webkit-keyframes name {
 }

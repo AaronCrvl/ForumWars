@@ -17,6 +17,8 @@
     }
 
 .nav-title-bomb[b-nqkq92omyw] {
+    transition: ease;
+    animation: bombMove-b-nqkq92omyw 1s linear infinite;
 }
 
 .nav[b-nqkq92omyw] {
@@ -46,14 +48,34 @@
     padding: 2px;
 }
 
-/*Animations*/
-@keyframes bombAnimation-b-nqkq92omyw {
+/* --------------------------! Animations !-------------------------- */
+/* --------------------------! Bomb Move!-------------------------- */
+@keyframes bombMove-b-nqkq92omyw {
     0% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.0);
     }
 }
 
-@-moz-keyframes bombAnimation {
+@-moz-keyframes bombMove {
+    0% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
 }
 
-@-webkit-keyframes bombAnimation {
+@-webkit-keyframes bombMove {
+    0% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
 }
