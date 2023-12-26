@@ -23,3 +23,8 @@ This project is being made using the Blazor Server App of the .NET platform. Bla
 
 ## 🔖 Figma
 [Link🔗](https://www.figma.com/file/91z5F7j7aPSoGi60ZyqwQh/ForumWars?type=design&node-id=0%3A1&mode=design&t=DCBcLYIKRUitupTN-1)
+
+
+
+## 📣 Live
+https://github.com/AaronCrvl/ForumWars/assets/72924198/340ad176-e5a4-489b-a68d-fabba1894fee
