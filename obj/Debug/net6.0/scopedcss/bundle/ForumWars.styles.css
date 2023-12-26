@@ -625,8 +625,7 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
 .item-info[b-f5vv66fie5] {
     padding: 2px;
     display: flex;
-    height: min-content;
-    padding: 1px;
+    height: min-content;    
     width: stretch;    
 }
 
