@@ -79,8 +79,7 @@
 .item-info {
     padding: 2px;
     display: flex;
-    height: min-content;
-    padding: 1px;
+    height: min-content;    
     width: stretch;    
 }
 
