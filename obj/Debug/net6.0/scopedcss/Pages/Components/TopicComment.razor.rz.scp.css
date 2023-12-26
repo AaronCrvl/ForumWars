@@ -13,12 +13,14 @@
 }
 
 .comment-username[b-6xxti71bud] {
+    font-weight: bold;
     font-size: larger;
 }
 
 .comment-creation-date[b-6xxti71bud] {
     font-size: larger;
     margin-left: auto;
+    font-weight: bold;
 }
 
 .comment-text[b-6xxti71bud] {
@@ -51,6 +53,7 @@
     }
 
 .comment-int[b-6xxti71bud] {
+    font-weight: bold;
     text-decoration: none;
     border: 0px;
     background-color: khaki;

@@ -14,6 +14,10 @@
     cursor: default;
 }
 
+.results-content {
+    margin-top: 25px;
+}
+
 .user-interaction-wrapper {
     margin-top: 15px;
 }
@@ -49,10 +53,65 @@
     background-color: whitesmoke;
 }
 
+.items-wrapper {
+    height: stretch;
+    grid-gap: 20px;
+    overflow-y: scroll;
+}
+
 .search-item {
     flex: 1;
-    background-color: darkkhaki;
+    padding: 5px;
+    margin-bottom: 15px;
     border-radius: 2%;
+    border: darkkhaki 2px solid;
+    transition: 0.2s ease-in-out;
+    transform: scale(0.9);
+}
+
+    .search-item:hover {
+        background-color: darkkhaki;
+        border: 0px;
+        cursor: pointer;
+        transform: scale(1);
+    }
+
+.item-info {
+    padding: 2px;
+    display: flex;
+    height: min-content;
+    padding: 1px;
+    width: stretch;    
+}
+
+.item-hour {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+}
+
+.item-upvotes {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+    margin-left: auto;
+    text-align: right;
+}
+
+.topic {
+    border: orangered 2px thin;
+    background-color: orange;
+    color: white;
+    padding: 3px;
+    transform: scale(0.9);
+    border-radius: 5%;
+    width: stretch;
+}
+
+.item-title {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
 }
 
 .discussion-topics {

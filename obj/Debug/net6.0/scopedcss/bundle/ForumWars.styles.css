@@ -63,12 +63,14 @@
 }
 
 .comment-username[b-6xxti71bud] {
+    font-weight: bold;
     font-size: larger;
 }
 
 .comment-creation-date[b-6xxti71bud] {
     font-size: larger;
     margin-left: auto;
+    font-weight: bold;
 }
 
 .comment-text[b-6xxti71bud] {
@@ -101,6 +103,7 @@
     }
 
 .comment-int[b-6xxti71bud] {
+    font-weight: bold;
     text-decoration: none;
     border: 0px;
     background-color: khaki;
@@ -557,6 +560,10 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     cursor: default;
 }
 
+.results-content[b-f5vv66fie5] {
+    margin-top: 25px;
+}
+
 .user-interaction-wrapper[b-f5vv66fie5] {
     margin-top: 15px;
 }
@@ -592,10 +599,65 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     background-color: whitesmoke;
 }
 
+.items-wrapper[b-f5vv66fie5] {
+    height: stretch;
+    grid-gap: 20px;
+    overflow-y: scroll;
+}
+
 .search-item[b-f5vv66fie5] {
     flex: 1;
-    background-color: darkkhaki;
+    padding: 5px;
+    margin-bottom: 15px;
     border-radius: 2%;
+    border: darkkhaki 2px solid;
+    transition: 0.2s ease-in-out;
+    transform: scale(0.9);
+}
+
+    .search-item:hover[b-f5vv66fie5] {
+        background-color: darkkhaki;
+        border: 0px;
+        cursor: pointer;
+        transform: scale(1);
+    }
+
+.item-info[b-f5vv66fie5] {
+    padding: 2px;
+    display: flex;
+    height: min-content;
+    padding: 1px;
+    width: stretch;    
+}
+
+.item-hour[b-f5vv66fie5] {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+}
+
+.item-upvotes[b-f5vv66fie5] {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+    margin-left: auto;
+    text-align: right;
+}
+
+.topic[b-f5vv66fie5] {
+    border: orangered 2px thin;
+    background-color: orange;
+    color: white;
+    padding: 3px;
+    transform: scale(0.9);
+    border-radius: 5%;
+    width: stretch;
+}
+
+.item-title[b-f5vv66fie5] {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
 }
 
 .discussion-topics[b-f5vv66fie5] {
@@ -629,6 +691,7 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
 
 .topic-title-wrapper[b-t0n9l0emv3] {
     display: flex;
+    margin-bottom: 5px;
 }
 
 .topic-title[b-t0n9l0emv3] {
@@ -637,7 +700,7 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
 }
 
 .topics[b-t0n9l0emv3] {
-    margin-left: 35px;
+    margin-left: auto;
     display: flex;
     gap: 10px;
 }
@@ -648,7 +711,23 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     height: fit-content;
     border: 4px;
     padding: 10px;
-    border-radius: 15%;
+    border-radius: 15%;    
+}
+
+.topic-creation-info[b-t0n9l0emv3] {
+    display: flex;
+    margin-bottom: 28px;
+}
+
+.topic-author[b-t0n9l0emv3] {
+    font-weight: bold;
+    color: black;
+}
+
+.topic-creation-date[b-t0n9l0emv3] {
+    font-weight: bold;
+    margin-left: auto;
+    color: black;
 }
 
 .topic-text[b-t0n9l0emv3] {
@@ -777,15 +856,26 @@ html[b-5xyxhp1lar] {
 
 .nav-title[b-nqkq92omyw] {
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
     .nav-title:hover[b-nqkq92omyw] {
+        transform: skew(10deg, 5deg);
+        animation: ColorChange-b-nqkq92omyw 1.5s linear infinite;
     }
 
 .nav-title-bomb[b-nqkq92omyw] {
-    transition: ease;
-    animation: bombMove-b-nqkq92omyw 1s linear infinite;
+    opacity: 75%;
+    transition: 0.2s ease-in;
+    transform: scale(1);
 }
+
+    .nav-title-bomb:hover[b-nqkq92omyw] {
+        color-scheme: light;
+        font-size: 45px;
+        opacity: 100%;
+        transform: scale(1.1);
+    }
 
 .nav[b-nqkq92omyw] {
     flex: 1;
@@ -796,6 +886,7 @@ html[b-5xyxhp1lar] {
 }
 
 .nav-option[b-nqkq92omyw] {
+    font-size: 23px;
     margin-right: 45px;
     text-align: center;
     text-decoration: none;
@@ -803,6 +894,9 @@ html[b-5xyxhp1lar] {
 
     .nav-option:hover[b-nqkq92omyw] {
         cursor: pointer;
+        transition: none ease-in-out 1s;
+        transform: rotate(-5deg) scale(1.1);
+        text-shadow: 2px 4px 4px black;
     }
 
 .nav-link:hover[b-nqkq92omyw] {
@@ -815,7 +909,7 @@ html[b-5xyxhp1lar] {
 }
 
 /* --------------------------! Animations !-------------------------- */
-/* --------------------------! Bomb Move!-------------------------- */
+/* --------------------------! Bomb Move !-------------------------- */
 @keyframes bombMove-b-nqkq92omyw {
     0% {
         transform: scale(1.5);
@@ -843,5 +937,118 @@ html[b-5xyxhp1lar] {
 
     100% {
         transform: scale(1.0);
+    }
+}
+
+/* --------------------------! Color Change !-------------------------- */
+@keyframes ColorChange-b-nqkq92omyw {
+    0% {
+        color: black;
+    }
+
+    25% {
+        color: coral;
+    }
+
+    50% {
+        color: white;
+        transform: matrix(0.707, 0.707, -0.707, 0, 0); /*45 degrees rotation*/
+    }
+
+    75% {
+        color: red;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+@-moz-keyframes ColorChange {
+    0% {
+        color: black;
+    }
+
+    25% {
+        color: coral;
+    }
+
+    50% {
+        color: white;
+        transform: matrix(0.707, 0.707, -0.707, 0, 0); /*45 degrees rotation*/
+    }
+
+    75% {
+        color: red;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+@-webkit-keyframes ColorChange {
+    0% {
+        color: black;
+    }
+
+    25% {
+        color: coral;
+    }
+
+    50% {
+        color: white;
+    }
+
+    75% {
+        color: red;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+
+/* --------------------------! BombMove !-------------------------- */
+@keyframes BombMove-b-nqkq92omyw {
+    0% {
+        transform: rotate(-25deg);
+    }
+
+    50% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(25deg);
+    }
+}
+
+@-moz-keyframes BombMove {
+    0% {
+        transform: rotate(-25deg);
+    }
+
+    50% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(25deg);
+    }
+}
+
+@-webkit-keyframes BombMove {
+    0% {
+        transform: rotate(-25deg);
+    }
+
+    50% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(25deg);
     }
 }

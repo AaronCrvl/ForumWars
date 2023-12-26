@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ForumWars.Data;
+using System.Linq;
 
 namespace ForumWars.Controllers
 {
@@ -12,6 +13,8 @@ namespace ForumWars.Controllers
              new Topic
             {
                 Id = 0,
+                Author = "MikeDice24555",
+                CreationDate = new DateTime(2023, 12, 25),
                 Title = "Comedy Shows",
                 UpVotes = 55,
                 TopicText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -20,6 +23,8 @@ namespace ForumWars.Controllers
             new Topic
             {
                 Id = 1,
+                Author = "MikeDice24555",
+                CreationDate = new DateTime(2023, 08, 06),
                 Title = "Why start with NextJS ?",
                 UpVotes = 84,
                 TopicText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -28,6 +33,8 @@ namespace ForumWars.Controllers
             new Topic
             {
                 Id = 2,
+                Author = "__AnotherAlien",
+                CreationDate = new DateTime(2023, 12, 12),
                 Title = "Invincible Season 2",
                 TopicText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 UpVotes = 45,
@@ -36,6 +43,8 @@ namespace ForumWars.Controllers
             new Topic
             {
                 Id = 3,
+                Author = "StupidDreams",
+                CreationDate = new DateTime(2023, 11, 29),
                 Title = ".NET Blazor Server",
                 TopicText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ ".NET", ".NET Core" },
@@ -44,6 +53,8 @@ namespace ForumWars.Controllers
             new Topic
             {
                 Id = 4,
+                Author = "user415522",
+                CreationDate = new DateTime(2023, 12, 20),
                 Title = "New Salmon Receipt!",
                 TopicText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Food", "Cooking", "Kitchen"},
@@ -52,6 +63,8 @@ namespace ForumWars.Controllers
             new Topic
             {
                 Id = 5,
+                Author = "MikeDice24555",
+                CreationDate = new DateTime(2023, 12, 17),
                 Title = "Leet Code - A New Way To Prepare Yourself",
                 TopicText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Development", "LeetCode" },
@@ -68,16 +81,30 @@ namespace ForumWars.Controllers
         #endregion
 
         #region Methods
-        public Task<List<Topic>> GetTopicList()
+        public Task<List<Topic>> GetTopicList(int qtd = 0)
         {
-            Task.Delay(2000); // latência de 2 segundos
-            return Task.FromResult(_topics);
+            Task.Delay(2000); // 2 seconds latency            
+            return Task.FromResult(qtd > 0 ? _topics.Take(qtd).ToList() : _topics);
         }
 
-        public Task<List<Topic>> SearchInTopicList(string typedText)
+        public Task<List<Topic>> SearchInTopicList(string? typedText = "", int? upvotes = 0, DateTime initialDate = new DateTime(), DateTime finalDate = new DateTime())
         {
-            Task.Delay(1000); // latência de 2 segundos
-            return Task.FromResult(_topics.Where(x => x.Title.Contains(typedText) == true).ToList<Topic>());
+            Task.Delay(2000); // 2 seconds latency   
+            var finalList = _topics;
+
+            if (typedText != null && typedText.Length > 0)
+                finalList = finalList.Where(x => x.Title.Contains(typedText) == true).ToList<Topic>();
+
+            if (upvotes > 0)
+                finalList = finalList.Where(x => x.UpVotes >= upvotes).ToList();
+
+            if (initialDate != new DateTime())
+                finalList = finalList.Where(x => x.CreationDate >= initialDate).ToList();
+
+            if (initialDate != new DateTime())
+                finalList = finalList.Where(x => x.CreationDate <= finalDate).ToList();            
+
+            return Task.FromResult(finalList);
         }
 
         public Task<Topic> GetTopic(int idTopic)

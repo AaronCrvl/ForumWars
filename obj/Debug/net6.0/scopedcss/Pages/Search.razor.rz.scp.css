@@ -14,6 +14,10 @@
     cursor: default;
 }
 
+.results-content[b-f5vv66fie5] {
+    margin-top: 25px;
+}
+
 .user-interaction-wrapper[b-f5vv66fie5] {
     margin-top: 15px;
 }
@@ -49,10 +53,65 @@
     background-color: whitesmoke;
 }
 
+.items-wrapper[b-f5vv66fie5] {
+    height: stretch;
+    grid-gap: 20px;
+    overflow-y: scroll;
+}
+
 .search-item[b-f5vv66fie5] {
     flex: 1;
-    background-color: darkkhaki;
+    padding: 5px;
+    margin-bottom: 15px;
     border-radius: 2%;
+    border: darkkhaki 2px solid;
+    transition: 0.2s ease-in-out;
+    transform: scale(0.9);
+}
+
+    .search-item:hover[b-f5vv66fie5] {
+        background-color: darkkhaki;
+        border: 0px;
+        cursor: pointer;
+        transform: scale(1);
+    }
+
+.item-info[b-f5vv66fie5] {
+    padding: 2px;
+    display: flex;
+    height: min-content;
+    padding: 1px;
+    width: stretch;    
+}
+
+.item-hour[b-f5vv66fie5] {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+}
+
+.item-upvotes[b-f5vv66fie5] {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+    margin-left: auto;
+    text-align: right;
+}
+
+.topic[b-f5vv66fie5] {
+    border: orangered 2px thin;
+    background-color: orange;
+    color: white;
+    padding: 3px;
+    transform: scale(0.9);
+    border-radius: 5%;
+    width: stretch;
+}
+
+.item-title[b-f5vv66fie5] {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
 }
 
 .discussion-topics[b-f5vv66fie5] {

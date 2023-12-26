@@ -23,6 +23,7 @@
 
 .topic-title-wrapper {
     display: flex;
+    margin-bottom: 5px;
 }
 
 .topic-title {
@@ -31,7 +32,7 @@
 }
 
 .topics {
-    margin-left: 35px;
+    margin-left: auto;
     display: flex;
     gap: 10px;
 }
@@ -42,7 +43,23 @@
     height: fit-content;
     border: 4px;
     padding: 10px;
-    border-radius: 15%;
+    border-radius: 15%;    
+}
+
+.topic-creation-info {
+    display: flex;
+    margin-bottom: 28px;
+}
+
+.topic-author {
+    font-weight: bold;
+    color: black;
+}
+
+.topic-creation-date {
+    font-weight: bold;
+    margin-left: auto;
+    color: black;
 }
 
 .topic-text {

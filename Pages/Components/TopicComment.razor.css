@@ -13,12 +13,14 @@
 }
 
 .comment-username {
+    font-weight: bold;
     font-size: larger;
 }
 
 .comment-creation-date {
     font-size: larger;
     margin-left: auto;
+    font-weight: bold;
 }
 
 .comment-text {
@@ -51,6 +53,7 @@
     }
 
 .comment-int {
+    font-weight: bold;
     text-decoration: none;
     border: 0px;
     background-color: khaki;

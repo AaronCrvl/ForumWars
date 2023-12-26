@@ -12,8 +12,8 @@
     {
         <div class="topic-wrapper">
             <div class="topic-title-wrapper">
-                <div class="topic-id">#@idTopic.</div>
-                <div class="topic-title">@topic.Title</div>
+                <div class="topic-id">#@idTopic</div>
+                <div class="topic-title">- @topic.Title</div>                
                 <div class="topics">
                     @if (topic.CommunityTopics == null)
                     {
@@ -27,6 +27,10 @@
                         }
                     }
                 </div>
+            </div>
+            <div class="topic-creation-info">
+                <span class="topic-author">@topic.Author</span>
+                <span class="topic-creation-date">@topic.CreationDate.ToShortDateString()</span>
             </div>
             <p class="topic-text">@topic.TopicText</p>
         </div>
@@ -51,7 +55,12 @@
 @code {
     [Parameter]
     public string idTopic { get; set; }
- 
+
+    public Topic(string idTopic)
+    {
+        this.idTopic = idTopic;
+    }
+
     public ForumWars.Data.Topic? topic;
     public List<ForumWars.Data.Comment>? comments;
 
