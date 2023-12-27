@@ -84,7 +84,9 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
+/* ---------------------------------// Animations ---------------------------------//  */
 
+/* ---------------------------------// Spin ---------------------------------//  */
 @keyframes spin {
     0% {
     }
@@ -109,5 +111,172 @@ a, .btn-link {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/* ---------------------------------// Title Color Change ---------------------------------//  */
+@keyframes TitleColorChange {
+    0% {
+        color: orange;
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1) contrast(1) saturate(1);
+    }
+
+    20% {
+        color: red;
+        transform: scale(1.2) rotate(45deg);
+        filter: brightness(0.8) contrast(1.2) saturate(1);
+    }
+
+    40% {
+        color: white;
+        transform: scale(1) rotate(90deg);
+        filter: brightness(0.6) contrast(1.4) saturate(1);
+    }
+
+    60% {
+        color: yellow;
+        transform: scale(1.2) rotate(135deg);
+        filter: brightness(0.8) contrast(1.2) saturate(1);
+    }
+
+    80% {
+        color: orange;
+        transform: scale(1) rotate(180deg);
+        filter: brightness(1) contrast(1) saturate(1);
+    }
+
+    100% {
+        color: orange;
+        transform: scale(1) rotate(360deg);
+        filter: brightness(1) contrast(1) saturate(1);
+    }
+}
+
+@-moz-keyframes TitleColorChange {
+    0% {
+        color: orange;
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1) contrast(1) saturate(1);
+    }
+
+    20% {
+        color: red;
+        transform: scale(1.2) rotate(45deg);
+        filter: brightness(0.8) contrast(1.2) saturate(1);
+    }
+
+    40% {
+        color: white;
+        transform: scale(1) rotate(90deg);
+        filter: brightness(0.6) contrast(1.4) saturate(1);
+    }
+
+    60% {
+        color: yellow;
+        transform: scale(1.2) rotate(135deg);
+        filter: brightness(0.8) contrast(1.2) saturate(1);
+    }
+
+    80% {
+        color: orange;
+        transform: scale(1) rotate(180deg);
+        filter: brightness(1) contrast(1) saturate(1);
+    }
+
+    100% {
+        color: orange;
+        transform: scale(1) rotate(360deg);
+        filter: brightness(1) contrast(1) saturate(1);
+    }
+}
+
+@-webkit-keyframes TitleColorChange {
+    0% {
+        color: orange;
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1) contrast(1) saturate(1);
+    }
+
+    20% {
+        color: red;
+        transform: scale(1.2) rotate(45deg);
+        filter: brightness(0.8) contrast(1.2) saturate(1);
+    }
+
+    40% {
+        color: white;
+        transform: scale(1) rotate(90deg);
+        filter: brightness(0.6) contrast(1.4) saturate(1);
+    }
+
+    60% {
+        color: yellow;
+        transform: scale(1.2) rotate(135deg);
+        filter: brightness(0.8) contrast(1.2) saturate(1);
+    }
+
+    80% {
+        color: orange;
+        transform: scale(1) rotate(180deg);
+        filter: brightness(1) contrast(1) saturate(1);
+    }
+
+    100% {
+        color: orange;
+        transform: scale(1) rotate(360deg);
+        filter: brightness(1) contrast(1) saturate(1);
+    }
+}
+
+/* ---------------------------------// Bomb Shake ---------------------------------//  */
+@keyframes BombShake {
+    0% {
+        background-color: #e74c3c; /* Red */
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
+    }
+
+    20%, 80% {
+        background-color: #e74c3c; /* Red */
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
+    }
+
+    50% {
+        background-color: #f39c12; /* Orange */
+        box-shadow: 0 0 20px rgba(243, 156, 18, 0.8);
+    }
+}
+
+@-moz-keyframes BombShake {
+    0% {
+        background-color: #e74c3c; /* Red */
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
+    }
+
+    20%, 80% {
+        background-color: #e74c3c; /* Red */
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
+    }
+
+    50% {
+        background-color: #f39c12; /* Orange */
+        box-shadow: 0 0 20px rgba(243, 156, 18, 0.8);
+    }
+}
+
+@-webkit-keyframes BombShake {
+    0% {
+        background-color: #e74c3c; /* Red */
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
+    }
+
+    20%, 80% {
+        background-color: #e74c3c; /* Red */
+        box-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
+    }
+
+    50% {
+        background-color: #f39c12; /* Orange */
+        box-shadow: 0 0 20px rgba(243, 156, 18, 0.8);
     }
 }

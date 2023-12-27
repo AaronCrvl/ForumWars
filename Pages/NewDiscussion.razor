@@ -1,0 +1,76 @@
+﻿@page "/new-discussion"
+
+<div class="new-discussion-page-wrapper">
+    <span class="page-title">Create a New Discussion</span>
+    <div class="inputs-wrapper">
+        <input class="input-option" type="text" @bind="Title" @oninput="(e)=> { Title=(string)e.Value; ValidateFields(); }" />
+        <input class="input-option" type="text" @bind="Description" @oninput="(e)=> { Description=(string)e.Value; ValidateFields(); }" />
+        <div class="topics-wrapper">
+            <input class="input-option" type="text" @bind="InputTopic" @oninput="(e) => { InputTopic=(string)e.Value; }" />
+            <button @onclick="()=> { Topics.Add(InputTopic); }">Save Topic Name</button>
+        </div>
+    </div>
+    @if (isTyping)
+    {
+        <div class="spinner-control">
+            <div class="spinner-wrapper">
+                <div class="spinner"></div>
+            </div>
+            <span>🧤Checking input values...</span>
+        </div>
+    }
+    @if (InputError)
+    {
+        <div class="error-list-wrapper">
+            <span class="error-list-title">❌❗ Error List</span>
+            <ul class="error-list-items-wrapper">
+                @foreach (string error in ErrorList)
+                {
+                    <li class="error-list-item">@error</li>
+                }
+            </ul>
+        </div>
+    }
+    <button class="create-discussion-btn">🧧Create</button>
+</div>
+
+@code {
+    #region Properties
+    // Input Properties
+    private string Title { get; set; } = "";
+    private string Description { get; set; } = "";
+    private string InputTopic { get; set; } = "";
+    private List<string> Topics { get; set; } = new List<string>();
+    // Input Error Control
+    private List<string> ErrorList { get; set; } = new List<string>();
+    private bool InputError { get; set; } = false;
+    // Animations Control
+    private bool isTyping { get; set; } = false;
+    #endregion
+
+    #region Methods
+    public void ValidateFields()
+    {
+        var validationRules = new List<string> {
+            "The title must have more then five letters.",
+            "The description must have more then twenty letters.",
+            "The discussion must have at least one topic."
+        };
+
+        if (Title.Length < 5 && !ErrorList.Contains(validationRules[0]))
+            ErrorList.Add(validationRules[0]);
+        else if (ErrorList.Contains(validationRules[0]))
+            ErrorList.Remove(validationRules[0]);
+
+        if (Description.Length < 20 && !ErrorList.Contains(validationRules[1]))
+            ErrorList.Add(validationRules[1]);
+        else if (ErrorList.Contains(validationRules[1]))
+            ErrorList.Remove(validationRules[1]);
+
+        if (InputTopic.Count() > 1 && !ErrorList.Contains(validationRules[2]))
+            ErrorList.Add(validationRules[2]);
+        else if (ErrorList.Contains(validationRules[2]))
+            ErrorList.Remove(validationRules[2]);
+    }
+    #endregion
+}

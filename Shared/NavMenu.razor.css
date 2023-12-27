@@ -1,12 +1,20 @@
 .nav-wrapper {
     flex: 1;
-    color: white;
-    display: flex;
+    color: white;    
     padding: 20px;
     font-weight: bold;
-    font-size: x-large;
-    background-color: red;
+    font-size: x-large;    
     background-color: orangered;
+}
+
+.nav-content {
+    display: flex;
+    transition: ease-in-out 0.2s;
+    opacity: 75%;
+}
+
+.nav-content:hover {
+    opacity: 100%;
 }
 
 .nav-title {

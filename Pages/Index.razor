@@ -2,13 +2,27 @@
 @using ForumWars.Pages.Components
 @using ForumWars.Controllers
 
-<script>
-    function StartSession(){
-        localStorage.setItem("theme", "black");
-    }
-</script>
 <div>
     <PageTitle>Forum Wars</PageTitle>
+    <div style="flex: 1; width:stretch; text-align:center; margin-top: 15px;">
+        <span style="font-size:70px; font-weight:bold; border-radius: 5%;">💣</span>
+        <span style="font-size:90px; font-weight:bold; /* animation: TitleColorChange 3s infinite; */ transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;">ForumWars</span>
+        <div style="row-gap:10px;">
+            <article style="font-weight:bold; text-align:justify-all; font-size: 18px; margin-bottom:5px;">
+                Hey there! Welcome to our cool forum hangout powered by C# and Blazor from .NET.
+                We're diving into the awesome world of online chats and discussions.
+                Blazor, mixing C# magic with web stuff, lets us create a lively forum where you can spark up convos, drop new topics,
+                and chat it up in style.
+            </article>
+            <article style="font-weight:bold; text-align:justify-all; font-size: 18px;">
+                From logging in to kicking off fresh discussions and getting real-time updates,
+                we're here to explore how our forum app brings people together.
+            </article><article style="font-weight:bold; text-align:justify-all; font-size: 18px;">
+                Get ready for a tech journey that's all about fun,
+                connection, and the fantastic combo of C# and Blazor! 🚀🎉
+            </article>
+        </div>
+    </div>
     <TrendingHastags></TrendingHastags>
     <TopicPreview></TopicPreview>
 </div>
@@ -17,6 +31,6 @@
     SessionController session;
     protected override void OnInitialized()
     {
-        session = new SessionController();        
-    }  
+        session = new SessionController();
+    }
 }

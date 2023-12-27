@@ -296,7 +296,7 @@
 .trending-hashtags-wrapper[b-cnxfghmh7x] {
     width: auto;
     height: max-content;
-    margin-top: 55px;
+    margin-top: 90px;
 }
 
 .content[b-cnxfghmh7x] {
@@ -542,6 +542,40 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     border: white 2px thick;
     border-radius: 70%;
     background-color: white;
+}
+/* _content/ForumWars/Pages/NewDiscussion.razor.rz.scp.css */
+.new-discussion-page-wrapper[b-v6rgc89hgy] {
+    height: stretch;
+    width: stretch;
+}
+
+.page-title[b-v6rgc89hgy] {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.inputs-wrapper[b-v6rgc89hgy] {
+    padding: 2px;
+    border-radius: 2%;
+    border: black 2px thin;
+}
+
+.input-option[b-v6rgc89hgy] {
+    width: stretch;
+    border-radius : 5%;
+    border: black 2px thin;
+}
+
+.input-option:focus[b-v6rgc89hgy] {
+    border: orangered 2px thick;    
+}
+
+.spinner-control[b-v6rgc89hgy] {
+    display : flex;
+}
+
+.create-discussion-btn[b-v6rgc89hgy] {
+
 }
 /* _content/ForumWars/Pages/Search.razor.rz.scp.css */
 .page-wrapper[b-f5vv66fie5] {
@@ -844,13 +878,21 @@ html[b-5xyxhp1lar] {
 /* _content/ForumWars/Shared/NavMenu.razor.rz.scp.css */
 .nav-wrapper[b-nqkq92omyw] {
     flex: 1;
-    color: white;
-    display: flex;
+    color: white;    
     padding: 20px;
     font-weight: bold;
-    font-size: x-large;
-    background-color: red;
+    font-size: x-large;    
     background-color: orangered;
+}
+
+.nav-content[b-nqkq92omyw] {
+    display: flex;
+    transition: ease-in-out 0.2s;
+    opacity: 75%;
+}
+
+.nav-content:hover[b-nqkq92omyw] {
+    opacity: 100%;
 }
 
 .nav-title[b-nqkq92omyw] {

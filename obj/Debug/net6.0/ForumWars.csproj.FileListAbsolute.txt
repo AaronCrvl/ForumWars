@@ -37,3 +37,4 @@ C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Component
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Search.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Components\Footer.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\User.razor.rz.scp.css
+C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\NewDiscussion.razor.rz.scp.css

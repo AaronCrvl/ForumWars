@@ -2,21 +2,24 @@
 @inject NavigationManager NavManager
 
 <div class="nav-wrapper">
-    <div class="nav-title" @onclick=RedirectToHomePage>
-        <span class="nav-title-text">ForumWars</span>
-        <span class="nav-title-bomb">💣</span>
-    </div>
-    <nav class="nav">
-        <div class="nav-option" @onclick=RedirectToSearchPage>Search</div>
-        <div class="nav-option">Open New Discussion</div>
-        <div class="nav-option">Github</div>
-    </nav>
-    <div clas="user-area">
-        <User></User>
+    <div class="nav-content">
+        <div class="nav-title" @onclick=RedirectToHomePage>
+            <span class="nav-title-bomb">💣</span
+            <span class="nav-title-text">ForumWars</span>            
+        </div>
+        <nav class="nav">
+            <div role="link" class="nav-option" @onclick=RedirectToSearchPage>Search</div>
+            <div role="link" class="nav-option" @onclick=RedirectToNewDiscussionPage>New Discussion</div>
+            <div role="link" class="nav-option">Github</div>
+        </nav>
+        <div clas="user-area">
+            <User></User>
+        </div>
     </div>
 </div>
 
 @code {
+    #region Methods
     public void RedirectToHomePage()
     {
         NavManager.NavigateTo("/");
@@ -25,5 +28,16 @@
     public void RedirectToSearchPage()
     {
         NavManager.NavigateTo("/search");
-    }   
+    }
+
+    public void RedirectToNewDiscussionPage()
+    {
+        NavManager.NavigateTo("/new-discussion");
+    }
+
+    public void RedirectToGithub()
+    {        
+        NavManager.NavigateTo("www.github.com/AaronCrvl");
+    }
+    #endregion
 }
