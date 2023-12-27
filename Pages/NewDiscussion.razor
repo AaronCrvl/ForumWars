@@ -84,6 +84,7 @@
             "The discussion must have at least one topic."
         };
 
+        // Validation Rules Check
         if (Title.Length < 5 && !ErrorList.Contains(validationRules[0]))
             ErrorList.Add(validationRules[0]);
         else if (ErrorList.Contains(validationRules[0]))

@@ -1,52 +1,3 @@
-/* _content/ForumWars/Pages/Components/Footer.razor.rz.scp.css */
-.nav-wrapper[b-0ka4gf6zg8] {
-    flex: 1;
-    color: white;
-    display: flex;
-    padding: 20px;
-    font-weight: bold;
-    font-size: x-large;
-    background-color: red;
-    background-color: orangered;
-    cursor: default;
-}
-
-.nav-title[b-0ka4gf6zg8] {
-    cursor: pointer;
-}
-
-    .nav-title:hover[b-0ka4gf6zg8] {
-    }
-
-.nav-title-bomb[b-0ka4gf6zg8] {
-}
-
-.nav[b-0ka4gf6zg8] {
-    flex: 1;
-    color: white;
-    gap: 10px;
-    justify-content: center;
-    text-align: center;
-}
-
-.nav-option[b-0ka4gf6zg8] {
-    margin-right: 45px;
-    text-align: center;
-    text-decoration: none;
-}
-
-    .nav-option:hover[b-0ka4gf6zg8] {
-        cursor: pointer;
-    }
-
-.nav-link:hover[b-0ka4gf6zg8] {
-    cursor: pointer;
-}
-
-.user-area[b-0ka4gf6zg8] {
-    margin-left: auto;
-    padding: 2px;
-}
 /* _content/ForumWars/Pages/Components/TopicComment.razor.rz.scp.css */
 .comment-wrapper[b-6xxti71bud] {
     padding: 12px;
@@ -395,8 +346,8 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
         background-color: #782A94 !important;
     }
 
-.item-wrapper[b-cnxfghmh7x] {    
-}
+/*.item-wrapper {    
+}*/
 
     .item-wrapper:hover[b-cnxfghmh7x] {
         cursor: pointer;
@@ -492,22 +443,6 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
         -webkit-transform: translateX(100%);
     }
 }
-
-/* -------------------------- Interaction -------------------------- */
-@keyframes name-b-cnxfghmh7x {
-    from {
-    }
-
-    to {
-        background: yellow;
-    }
-}
-
-@-moz-keyframes name {
-}
-
-@-webkit-keyframes name {
-}
 /* _content/ForumWars/Pages/Components/User.razor.rz.scp.css */
 .user-info-wrapper[b-q4ow3f1kko] {
     display: flex;
@@ -561,11 +496,11 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     font-size: 25px;
     font-weight: bold;
 }
-
-.error-list-wrapper[b-v6rgc89hgy] {
+/*
+.error-list-wrapper {
     
 }
-
+*/
 .error-list-items-wrapper[b-v6rgc89hgy] {
     background-color: indianred;
 }
@@ -593,8 +528,9 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     display: flex;
 }
 
-.create-discussion-btn[b-v6rgc89hgy] {
+/*.create-discussion-btn {
 }
+*/
 /* _content/ForumWars/Pages/Search.razor.rz.scp.css */
 .page-wrapper[b-f5vv66fie5] {
     height: 100vh;
@@ -885,6 +821,55 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     border-radius: 5%;
     background-color: whitesmoke;
 }
+/* _content/ForumWars/Shared/Footer.razor.rz.scp.css */
+.nav-wrapper[b-agf0wr0ols] {
+    flex: 1;
+    color: white;
+    display: flex;
+    padding: 20px;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: red;
+    background-color: orangered;
+    cursor: default;
+}
+
+.nav-title[b-agf0wr0ols] {
+    cursor: pointer;
+}
+/*
+    .nav-title:hover {
+    }
+
+.nav-title-bomb {
+}
+*/
+.nav[b-agf0wr0ols] {
+    flex: 1;
+    color: white;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-option[b-agf0wr0ols] {
+    margin-right: 45px;
+    text-align: center;
+    text-decoration: none;
+}
+
+    .nav-option:hover[b-agf0wr0ols] {
+        cursor: pointer;
+    }
+
+.nav-link:hover[b-agf0wr0ols] {
+    cursor: pointer;
+}
+
+.user-area[b-agf0wr0ols] {
+    margin-left: auto;
+    padding: 2px;
+}
 /* _content/ForumWars/Shared/MainLayout.razor.rz.scp.css */
 html[b-5xyxhp1lar] {
     scroll-behavior: smooth;
@@ -967,8 +952,7 @@ html[b-5xyxhp1lar] {
 }
 
 .nav-option[b-nqkq92omyw] {
-    font-size: 23px;
-    margin-right: 45px;
+    font-size: 23px;    
     text-align: center;
     text-decoration: none;
     margin-right: 15px;

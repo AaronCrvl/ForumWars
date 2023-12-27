@@ -16,11 +16,11 @@
     font-size: 25px;
     font-weight: bold;
 }
-
+/*
 .error-list-wrapper {
     
 }
-
+*/
 .error-list-items-wrapper {
     background-color: indianred;
 }
@@ -48,5 +48,6 @@
     display: flex;
 }
 
-.create-discussion-btn {
+/*.create-discussion-btn {
 }
+*/

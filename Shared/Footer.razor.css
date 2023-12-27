@@ -13,13 +13,13 @@
 .nav-title {
     cursor: pointer;
 }
-
+/*
     .nav-title:hover {
     }
 
 .nav-title-bomb {
 }
-
+*/
 .nav {
     flex: 1;
     color: white;

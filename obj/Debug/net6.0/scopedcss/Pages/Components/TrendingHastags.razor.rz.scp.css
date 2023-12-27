@@ -92,8 +92,8 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
         background-color: #782A94 !important;
     }
 
-.item-wrapper[b-cnxfghmh7x] {    
-}
+/*.item-wrapper {    
+}*/
 
     .item-wrapper:hover[b-cnxfghmh7x] {
         cursor: pointer;
@@ -188,20 +188,4 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     100% {
         -webkit-transform: translateX(100%);
     }
-}
-
-/* -------------------------- Interaction -------------------------- */
-@keyframes name-b-cnxfghmh7x {
-    from {
-    }
-
-    to {
-        background: yellow;
-    }
-}
-
-@-moz-keyframes name {
-}
-
-@-webkit-keyframes name {
 }

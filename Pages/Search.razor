@@ -71,6 +71,7 @@
 
     private void HandleSearch()
     {
+        // Input Fields Validation for Search
         if(CurrentValue.Length > 3 && initialDate != new DateTime() && finalDate != new DateTime() && UpVotes.Length > 0)
             searchResult = cTopic.SearchInTopicList(CurrentValue, int.Parse(UpVotes), initialDate, finalDate).Result;
         else if(CurrentValue.Length > 3 && UpVotes.Length > 0) 

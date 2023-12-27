@@ -35,7 +35,6 @@ C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Component
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Components\TopicComment.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Components\TopicPreview.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Search.razor.rz.scp.css
-C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Components\Footer.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\User.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\NewDiscussion.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
@@ -52,3 +51,4 @@ C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\MudBlazor.dll
 C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\System.IO.Pipelines.dll
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\ForumWars.csproj.AssemblyReference.cache
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\ForumWars.csproj.CopyComplete
+C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Shared\Footer.razor.rz.scp.css
