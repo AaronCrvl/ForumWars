@@ -16,9 +16,9 @@ This project is being made using the Blazor Server App of the .NET platform. Bla
 
 ## 🧪 Technologies
 
-- [Blazor](https://dotnet.microsoft.com/pt-br/apps/aspnet/web-apps/blazor)
 - [C#](https://learn.microsoft.com/pt-br/dotnet/csharp/tour-of-csharp/#:~:text=C%23%20%C3%A9%20uma%20linguagem%20de,uso%20de%20componentes%20de%20software.)
-
+- [Blazor](https://dotnet.microsoft.com/pt-br/apps/aspnet/web-apps/blazor)
+- [MudBlazor](https://mudblazor.com/)
   
 
 ## 🔖 Figma

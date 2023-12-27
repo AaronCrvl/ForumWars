@@ -4,6 +4,7 @@
     flex: 1;
     width: 100%;
     color: black;
+    margin-bottom: 85px;
 }
 
     .topic-page-wrapper.dark-theme {
@@ -16,8 +17,9 @@
 }
 
 .topic-wrapper {
+    margin-top: 85px;
     padding: 76px;
-    border-radius: 5%;
+    border-radius: 2%;
     background-color: whitesmoke;
 }
 
@@ -38,12 +40,19 @@
 }
 
 .topic-topics {
+    cursor: pointer;
     color: white;
     background-color: red;
     height: fit-content;
     border: 4px;
     padding: 10px;
-    border-radius: 15%;    
+    border-radius: 15%;
+    transform: scale(1);
+    transition: ease-in-out 0.2s;
+}
+
+.topic-topics:hover {
+    transform:scale(1.1);
 }
 
 .topic-creation-info {

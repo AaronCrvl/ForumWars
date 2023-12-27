@@ -1,20 +1,22 @@
-﻿@using ForumWars.Data
+﻿@using ForumWars.Data;
+@using MudBlazor;
 
 <div class="comment-wrapper">
     <div class="comment-header-wrapper">
         <div class="comment-username">@UserComment.Username</div>
         <div class="comment-creation-date">@UserComment.CreatedDate</div>
     </div>
+    <hr class="divisor" />
     <div class="comment-text">@UserComment.CommentText</div>
     <div class="comment-interaction">
         <span class="like-int">👍</span>
         <span class="dislike-int">👎</span>
-        <button class="comment-int" @onclick=handleSubCommentBox>Create Comment</button>
+        <MudButton Color="Color.Error" Class="comment-int" @onclick=handleSubCommentBox>Create Comment</MudButton>
         @if(openSubComment)
         {
             <div class="sub-comment-wrapper">
                 <input class="sub-comment-input" type="text" placeholder="Leave a comment on this topic.👻" />
-                <button class="sub-comment-btn">Send</button>
+                <MudButton Color="Color.Primary" Class="sub-comment-btn" @onclick=handleSubCommentBox>Send</MudButton>
             </div>
         }
     </div>

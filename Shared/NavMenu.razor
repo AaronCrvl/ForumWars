@@ -1,25 +1,66 @@
 ﻿@using ForumWars.Pages.Components
 @inject NavigationManager NavManager
+@inject IJSRuntime JSRuntime
+@using MudBlazor
 
-<div class="nav-wrapper">
-    <div class="nav-content">
-        <div class="nav-title" @onclick=RedirectToHomePage>
-            <span class="nav-title-bomb">💣</span
-            <span class="nav-title-text">ForumWars</span>            
-        </div>
-        <nav class="nav">
-            <div role="link" class="nav-option" @onclick=RedirectToSearchPage>Search</div>
-            <div role="link" class="nav-option" @onclick=RedirectToNewDiscussionPage>New Discussion</div>
-            <div role="link" class="nav-option">Github</div>
-        </nav>
-        <div clas="user-area">
-            <User></User>
-        </div>
+<MudAppBar Color="Color.Primary">
+    <div class="nav-title" @onclick=RedirectToHomePage>
+        <MudText class="nav-title-bomb"></MudText>
+        <MudText class="nav-title-text">💣ForumWars</MudText>
+    </div>    
+    <MudSpacer />
+    <div style="display:flex; text-align:center; ">
+        <MudIconButton Icon="@Icons.Material.Filled.Search" Color="Color.Tertiary" class="nav-option" @onclick=RedirectToSearchPage />
+        <MudSpacer />        
+        <MudIconButton Icon="@Icons.Material.Filled.FiberNew" Color="Color.Tertiary" class="nav-option" @onclick=RedirectToNewDiscussionPage />
+        <MudSpacer />
+        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Tertiary" />
     </div>
-</div>
+    <MudSpacer />
+    <div class="user-area">
+        <MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="MyCustomTheme" />
+        <MudSwitch @bind-Checked="@_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool" Label="🌛" />
+        <User></User>
+    </div>
+</MudAppBar>
 
 @code {
+    #region Properties
+    private MudTheme _theme = new();
+    private bool _isDarkMode;
+
+    MudTheme MyCustomTheme = new MudTheme()
+        {
+            Palette = new PaletteLight()
+            {
+                Primary = Colors.Orange.Darken2,
+                Secondary = Colors.Shades.Black,
+                Tertiary = Colors.Shades.White,
+                Error = Colors.Red.Lighten1,
+                Warning = Colors.DeepOrange.Darken1,
+            },
+            PaletteDark = new PaletteDark()
+            {
+                Primary = Colors.BlueGrey.Darken1,                  
+                Secondary = Colors.Shades.White,
+                Tertiary = Colors.Cyan.Lighten1,
+                Error = Colors.Blue.Darken1,
+                Warning = Colors.LightBlue.Darken1,                
+            },
+            LayoutProperties = new LayoutProperties()
+            {
+                DrawerWidthLeft = "260px",
+                DrawerWidthRight = "300px"
+            }
+        };
+    #endregion
+
     #region Methods
+    private async Task ToggleDarkMode()
+    {
+        await JSRuntime.InvokeVoidAsync("toggleDarkMode");
+    }
+
     public void RedirectToHomePage()
     {
         NavManager.NavigateTo("/");
@@ -36,8 +77,8 @@
     }
 
     public void RedirectToGithub()
-    {        
-        NavManager.NavigateTo("www.github.com/AaronCrvl");
+    {
+        //NavManager.NavigateTo("www.github.com/AaronCrvl");
     }
     #endregion
 }

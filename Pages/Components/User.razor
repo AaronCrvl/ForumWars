@@ -1,11 +1,9 @@
 @using ForumWars.Controllers;
+@using MudBlazor;
 @inject NavigationManager NavManager;
 
 <div class="user-info-wrapper" @onclick="() => RedirectToUserPage(0)">
-    <div class="user-wrapper">        
-        <div class="user-head"></div>
-        <div class="user-body"></div>
-    </div>
+    <MudIconButton Icon="@Icons.Material.Filled.SupervisedUserCircle" Color="Color.Inherit" />
 </div>
 
 @code { 

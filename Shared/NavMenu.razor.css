@@ -1,11 +1,20 @@
 .nav-wrapper {
     flex: 1;
-    color: white;    
+    color: white;
     padding: 20px;
     font-weight: bold;
-    font-size: x-large;    
+    font-size: x-large;
     background-color: orangered;
 }
+
+    .nav-wrapper.dark-mode {
+        background-color: black;
+        flex: 1;
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+        font-size: x-large;
+    }
 
 .nav-content {
     display: flex;
@@ -13,11 +22,13 @@
     opacity: 75%;
 }
 
-.nav-content:hover {
-    opacity: 100%;
-}
+    .nav-content:hover {
+        opacity: 100%;
+    }
 
 .nav-title {
+    display: flex;
+    width: max-content;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
@@ -53,6 +64,7 @@
     margin-right: 45px;
     text-align: center;
     text-decoration: none;
+    margin-right: 15px;
 }
 
     .nav-option:hover {
@@ -67,9 +79,16 @@
 }
 
 .user-area {
+    width: auto;    
+    display: flex;
     margin-left: auto;
     padding: 2px;
 }
+
+.dark-mode-button {
+    font-size: 25px;
+}
+
 
 /* --------------------------! Animations !-------------------------- */
 /* --------------------------! Bomb Move !-------------------------- */

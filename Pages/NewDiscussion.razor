@@ -1,37 +1,54 @@
-﻿@page "/new-discussion"
+﻿@page "/new-discussion";
+@using MudBlazor;
 
 <div class="new-discussion-page-wrapper">
-    <span class="page-title">Create a New Discussion</span>
-    <div class="inputs-wrapper">
-        <input class="input-option" type="text" @bind="Title" @oninput="(e)=> { Title=(string)e.Value; ValidateFields(); }" />
-        <input class="input-option" type="text" @bind="Description" @oninput="(e)=> { Description=(string)e.Value; ValidateFields(); }" />
-        <div class="topics-wrapper">
-            <input class="input-option" type="text" @bind="InputTopic" @oninput="(e) => { InputTopic=(string)e.Value; }" />
-            <button @onclick="()=> { Topics.Add(InputTopic); }">Save Topic Name</button>
-        </div>
-    </div>
-    @if (isTyping)
-    {
-        <div class="spinner-control">
-            <div class="spinner-wrapper">
-                <div class="spinner"></div>
+    <div class="content-wrapper">
+        <MudText class="page-title" Style="font-size:45px; font-weight:bold; margin-bottom: 35px;">Create a New Discussion</MudText>
+        <MudTextField @bind-Value="@Title" Label="Title" Variant="Variant.Outlined" Margin="Margin.Dense" OnInternalInputChanged="(e)=> { Title=(string)e.Value; ValidateFields(); }" />
+        <MudTextField @bind-Value="@Description" Label="Description" Variant="Variant.Outlined" Margin="Margin.Dense" />
+        <MudAlert @bind-Value="@InputTopic" Label="Related Topics" Variant="Variant.Outlined" Margin="Margin.Dense" />
+        <div class="d-flex align-end justify-space-between mud-width-full" style="margin-top:25px; margin-bottom:25px;">
+            <div class="d-flex flex-column">
+                <MudText><b>Title:</b> @Title</MudText>
+                <MudText><b>Description:</b> @Description</MudText>
+                <MudText><b>InputTopic:</b>@InputTopic</MudText>
             </div>
-            <span>🧤Checking input values...</span>
+            <MudButton Variant="Variant.Filled" DisableElevation="true" OnClick="Reset">Reset Model</MudButton>
         </div>
-    }
-    @if (InputError)
-    {
-        <div class="error-list-wrapper">
-            <span class="error-list-title">❌❗ Error List</span>
-            <ul class="error-list-items-wrapper">
-                @foreach (string error in ErrorList)
-                {
-                    <li class="error-list-item">@error</li>
-                }
-            </ul>
-        </div>
-    }
-    <button class="create-discussion-btn">🧧Create</button>
+
+        @if (isTyping)
+        {
+            <div class="spinner-control">
+                <div class="spinner-wrapper">
+                    <div class="spinner"></div>
+                </div>
+                <span>🧤Checking input values...</span>
+            </div>
+        }
+
+        @if (InputError)
+        {
+            <div class="error-list-wrapper">
+                <MudText Style="font-size:15px; color:white;">❌❗ Error List</MudText>
+                <ul class="error-list-items-wrapper">
+                    @foreach (string error in ErrorList)
+                    {
+                        <MudAlert Severity="Severity.Error" class="error-list-item">@error</MudAlert>
+                    }
+                </ul>
+            </div>
+        }       
+
+        @if (!isDataValidated)
+        {
+            <MudAlert Severity="Severity.Normal">Enter data for validation.</MudAlert>
+        }
+        else
+        {
+            <MudAlert Severity="Severity.Success">All good here, try to create this discussion for the word to comment on it.</MudAlert>
+        }
+        <MudButton Style="font-size:25px; font-weight:bold;">🧧Create</MudButton>
+    </div>
 </div>
 
 @code {
@@ -43,14 +60,24 @@
     private List<string> Topics { get; set; } = new List<string>();
     // Input Error Control
     private List<string> ErrorList { get; set; } = new List<string>();
-    private bool InputError { get; set; } = false;
+    private bool InputError { get; set; } = true;
+    private bool isDataValidated { get; set; } = false;
     // Animations Control
     private bool isTyping { get; set; } = false;
     #endregion
 
     #region Methods
+    public void Reset()
+    {
+        this.Title = "";
+        this.Description = "";
+        this.InputTopic = "";
+    }
+
     public void ValidateFields()
     {
+        isTyping = true;
+
         var validationRules = new List<string> {
             "The title must have more then five letters.",
             "The description must have more then twenty letters.",
@@ -71,6 +98,9 @@
             ErrorList.Add(validationRules[2]);
         else if (ErrorList.Contains(validationRules[2]))
             ErrorList.Remove(validationRules[2]);
+
+        InputError = ErrorList.Count > 1;
+        isDataValidated = ErrorList.Count() == 0;
     }
     #endregion
 }

@@ -1,8 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "eEAg6D/b8UyN9nfRKRnvYYJjF6FC0jEP+pyV/4ajAEHpr3WOOUewivi05Hpyh4ZGZEs/NJLD1CzPI9I9r5MonA==",
+  "dgSpecHash": "om+9i+4LRClRA2rv8YYIkDIPvwBCpfwy2V5Pyv8oUc/yVXKCxrRrBUgF80XjCgF8Ie1Ecw7fIwuvK3EGuF/PLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\aaron\\source\\repos\\ForumWars\\ForumWars.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.25\\microsoft.aspnetcore.authorization.6.0.25.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.25\\microsoft.aspnetcore.components.6.0.25.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.25\\microsoft.aspnetcore.components.analyzers.6.0.25.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.25\\microsoft.aspnetcore.components.forms.6.0.25.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.25\\microsoft.aspnetcore.components.web.6.0.25.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.25\\microsoft.aspnetcore.metadata.6.0.25.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.extensions.localization\\6.0.25\\microsoft.extensions.localization.6.0.25.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\6.0.25\\microsoft.extensions.localization.abstractions.6.0.25.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\microsoft.jsinterop\\6.0.25\\microsoft.jsinterop.6.0.25.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\mudblazor\\6.11.2\\mudblazor.6.11.2.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
+    "C:\\Users\\aaron\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

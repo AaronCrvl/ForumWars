@@ -26,12 +26,12 @@
 .comment-text {
     display: flex;
     padding: 5px;
-    height: 40px;    
+    height: 40px;
 }
 
 .comment-interaction {
     margin-top: 35px;
-    display: flex;    
+    display: flex;
 }
 
 .like-int {
@@ -66,4 +66,12 @@
 
 .sub-comment-wrapper {
     display: flex;
+    padding: 2px;
+}
+
+.sub-comment-input {
+    flex: 1;
+    padding: 1px;
+    width: 560px;
+    margin-right: 5px;
 }

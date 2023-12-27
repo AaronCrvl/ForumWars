@@ -1,29 +1,34 @@
 ﻿@page "/"
 @using ForumWars.Pages.Components
 @using ForumWars.Controllers
+@using MudBlazor
 
 <div>
-    <PageTitle>Forum Wars</PageTitle>
-    <div style="flex: 1; width:stretch; text-align:center; margin-top: 15px;">
-        <span style="font-size:70px; font-weight:bold; border-radius: 5%;">💣</span>
-        <span style="font-size:90px; font-weight:bold; /* animation: TitleColorChange 3s infinite; */ transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;">ForumWars</span>
+    <PageTitle>Forum Wars</PageTitle>    
+    <div style="flex: 1; width:stretch; text-align:center; margin-top: 65px;">
+        <div style="display:flex; align-items:center; justify-content:center;">
+            <MudText Color="Color.Secondary" style="font-size:50px; text-align:center; font-weight:bold; border-radius: 5%;">💣</MudText>
+            <MudText Color="Color.Secondary" style="font-size:70px; text-align:center; font-weight:bold; /* animation: TitleColorChange 3s infinite; */ transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;">ForumWars</MudText>
+        </div>
+        <hr class="divisor" />
         <div style="row-gap:10px;">
-            <article style="font-weight:bold; text-align:justify-all; font-size: 18px; margin-bottom:5px;">
+            <MudText Color="Color.Secondary" style="font-weight:bold; text-align:justify-all; font-size: 18px; margin-bottom:5px;">
                 Hey there! Welcome to our cool forum hangout powered by C# and Blazor from .NET.
                 We're diving into the awesome world of online chats and discussions.
+                <br />
                 Blazor, mixing C# magic with web stuff, lets us create a lively forum where you can spark up convos, drop new topics,
                 and chat it up in style.
-            </article>
-            <article style="font-weight:bold; text-align:justify-all; font-size: 18px;">
+                <br />
                 From logging in to kicking off fresh discussions and getting real-time updates,
                 we're here to explore how our forum app brings people together.
-            </article><article style="font-weight:bold; text-align:justify-all; font-size: 18px;">
+                <br />
                 Get ready for a tech journey that's all about fun,
-                connection, and the fantastic combo of C# and Blazor! 🚀🎉
-            </article>
+                connection, and the fantastic combo of C# and Blazor!
+                <br />🚀🎉
+            </MudText>            
         </div>
-    </div>
-    <TrendingHastags></TrendingHastags>
+    </div>    
+    <TrendingHastags></TrendingHastags>    
     <TopicPreview></TopicPreview>
 </div>
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jbKVX/1qjaZXAYcNnZ96HcX29IT/KK8hEbTvGnlbUQI=",
+  "Hash": "Qb1Wmz+cUmIcX/6fvbtI0gFcvj2Vr9HR5EFn72q5BLw=",
   "Source": "ForumWars",
   "BasePath": "_content/ForumWars",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\aaron\\.nuget\\packages\\mudblazor\\6.11.2\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\aaron\\.nuget\\packages\\mudblazor\\6.11.2\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\aaron\\.nuget\\packages\\mudblazor\\6.11.2\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\aaron\\.nuget\\packages\\mudblazor\\6.11.2\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\aaron\\.nuget\\packages\\mudblazor\\6.11.2\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\aaron\\.nuget\\packages\\mudblazor\\6.11.2\\staticwebassets\\MudBlazor.min.js"
+    },
     {
       "Identity": "C:\\Users\\aaron\\source\\repos\\ForumWars\\obj\\Debug\\net6.0\\scopedcss\\bundle\\ForumWars.styles.css",
       "SourceId": "ForumWars",

@@ -1,6 +1,15 @@
 ﻿.new-discussion-page-wrapper {
-    height: stretch;
+    height: 100vh;
     width: stretch;
+    margin-bottom: 85px;
+}
+
+.content-wrapper {
+    flex: 1;
+    padding: 15px;
+    border-radius: 2%;
+    background-color: whitesmoke;
+    margin-top: 85px;
 }
 
 .page-title {
@@ -8,26 +17,36 @@
     font-weight: bold;
 }
 
+.error-list-wrapper {
+    
+}
+
+.error-list-items-wrapper {
+    background-color: indianred;
+}
+
 .inputs-wrapper {
-    padding: 2px;
-    border-radius: 2%;
+    padding: 15px;
     border: black 2px thin;
+    border-radius: 2%;
+    margin-top: 85px;
+    width: fit-content;
 }
 
 .input-option {
-    width: stretch;
-    border-radius : 5%;
+    width: 750px;
+    height: 75px;
+    border-radius: 5%;
     border: black 2px thin;
 }
 
-.input-option:focus {
-    border: orangered 2px thick;    
-}
+    .input-option:focus {
+        border: orangered 2px thick;
+    }
 
 .spinner-control {
-    display : flex;
+    display: flex;
 }
 
 .create-discussion-btn {
-
 }

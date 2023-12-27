@@ -55,6 +55,10 @@ a, .btn-link {
     color: red;
 }
 
+.divisor {
+    border: black 5px 5px thin;
+}
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;

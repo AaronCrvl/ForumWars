@@ -1,5 +1,6 @@
 ﻿@using ForumWars.Controllers;
-@inject NavigationManager NavManager
+@using MudBlazor;
+@inject NavigationManager NavManager;
 
 <script>
     () => {
@@ -11,7 +12,8 @@
     }
 </script>
 <div class="content">
-    <span class="title">🧧Discussions</span>
+    <MudText class="title" Color="Color.Secondary" Style="text-align:left; font-size:50px; text-align:center; font-weight:bold; ">🧧Discussions</MudText>
+    <hr class="divisor" />
     <div class="discussions-wrapper">
         @if (discussions == null)
         {

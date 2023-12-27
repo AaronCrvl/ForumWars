@@ -38,3 +38,17 @@ C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Search.ra
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\Components\Footer.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\User.razor.rz.scp.css
 C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\scopedcss\Pages\NewDiscussion.razor.rz.scp.css
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.Extensions.Localization.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\Microsoft.JSInterop.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\MudBlazor.dll
+C:\Users\aaron\source\repos\ForumWars\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\ForumWars.csproj.AssemblyReference.cache
+C:\Users\aaron\source\repos\ForumWars\obj\Debug\net6.0\ForumWars.csproj.CopyComplete

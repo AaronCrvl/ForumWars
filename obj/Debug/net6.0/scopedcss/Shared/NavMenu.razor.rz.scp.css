@@ -1,11 +1,20 @@
 .nav-wrapper[b-nqkq92omyw] {
     flex: 1;
-    color: white;    
+    color: white;
     padding: 20px;
     font-weight: bold;
-    font-size: x-large;    
+    font-size: x-large;
     background-color: orangered;
 }
+
+    .nav-wrapper.dark-mode[b-nqkq92omyw] {
+        background-color: black;
+        flex: 1;
+        color: white;
+        padding: 20px;
+        font-weight: bold;
+        font-size: x-large;
+    }
 
 .nav-content[b-nqkq92omyw] {
     display: flex;
@@ -13,11 +22,13 @@
     opacity: 75%;
 }
 
-.nav-content:hover[b-nqkq92omyw] {
-    opacity: 100%;
-}
+    .nav-content:hover[b-nqkq92omyw] {
+        opacity: 100%;
+    }
 
 .nav-title[b-nqkq92omyw] {
+    display: flex;
+    width: max-content;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
@@ -53,6 +64,7 @@
     margin-right: 45px;
     text-align: center;
     text-decoration: none;
+    margin-right: 15px;
 }
 
     .nav-option:hover[b-nqkq92omyw] {
@@ -67,9 +79,16 @@
 }
 
 .user-area[b-nqkq92omyw] {
+    width: auto;    
+    display: flex;
     margin-left: auto;
     padding: 2px;
 }
+
+.dark-mode-button[b-nqkq92omyw] {
+    font-size: 25px;
+}
+
 
 /* --------------------------! Animations !-------------------------- */
 /* --------------------------! Bomb Move !-------------------------- */

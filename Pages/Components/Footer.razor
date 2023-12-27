@@ -1,8 +1,10 @@
-﻿<div class="nav-wrapper">
-    <nav class="nav">
-        <div class="nav-option">Made with help of 🎶 and my 🐶.</div>
-    </nav>
-</div>
+﻿@using MudBlazor
+
+<MudAppBar Bottom="true" Fixed="false" class="nav-wrapper" Color="Color.Primary">
+    <MudSpacer />
+    <MudText Style="font-size:25px; font-weight:bolder;" class="nav-option">Made with help of 🎶 and my 🐶.</MudText>
+    <MudSpacer />
+</MudAppBar>
 
 @code {
 
