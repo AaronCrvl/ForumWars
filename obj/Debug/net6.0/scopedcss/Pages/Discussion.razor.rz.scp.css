@@ -1,4 +1,4 @@
-﻿.topic-page-wrapper {
+.discussion-page-wrapper[b-hxtk2cglt6] {
     height: stretch;
     flex-direction: row;
     flex: 1;
@@ -7,39 +7,39 @@
     margin-bottom: 85px;
 }
 
-    .topic-page-wrapper.dark-theme {
+    .discussion-page-wrapper.dark-theme[b-hxtk2cglt6] {
         color: white;
     }
 
-.topic-id {
+.discussion-id[b-hxtk2cglt6] {
     font-size: 80px;
     font-weight: bold;
 }
 
-.topic-wrapper {
+.discussion-wrapper[b-hxtk2cglt6] {
     margin-top: 85px;
     padding: 76px;
     border-radius: 2%;
     background-color: whitesmoke;
 }
 
-.topic-title-wrapper {
+.discussion-title-wrapper[b-hxtk2cglt6] {
     display: flex;
     margin-bottom: 5px;
 }
 
-.topic-title {
+.discussion-title[b-hxtk2cglt6] {
     font-size: 80px;
     font-weight: bold;
 }
 
-.topics {
+.discussions[b-hxtk2cglt6] {
     margin-left: auto;
     display: flex;
     gap: 10px;
 }
 
-.topic-topics {
+.discussion-discussions[b-hxtk2cglt6] {
     cursor: pointer;
     color: white;
     background-color: red;
@@ -51,45 +51,45 @@
     transition: ease-in-out 0.2s;
 }
 
-.topic-topics:hover {
+.discussion-topics:hover[b-hxtk2cglt6] {
     transform:scale(1.1);
 }
 
-.topic-creation-info {
+.discussion-creation-info[b-hxtk2cglt6] {
     display: flex;
     margin-bottom: 28px;
 }
 
-.topic-author {
+.discussion-author[b-hxtk2cglt6] {
     font-weight: bold;
     color: black;
 }
 
-.topic-creation-date {
+.discussion-creation-date[b-hxtk2cglt6] {
     font-weight: bold;
     margin-left: auto;
     color: black;
 }
 
-.topic-text {
+.discussion-text[b-hxtk2cglt6] {
     padding: 6px;
     font-size: larger;
 }
 
-.comment-section {
+.comment-section[b-hxtk2cglt6] {
     margin-top: 15px;
     padding: 76px;
     border-radius: 5%;
     background-color: whitesmoke;
 }
 
-.comments-section-title {
+.comments-section-title[b-hxtk2cglt6] {
     color: gray;
     font-size: 60px;
     font-weight: bold;
 }
 
-.user-comment-section-wrapper {
+.user-comment-section-wrapper[b-hxtk2cglt6] {
     margin-top: 15px;
     display: flex;
     flex: 1;
@@ -97,7 +97,7 @@
     height: 120px;
 }
 
-.user-comment {
+.user-comment[b-hxtk2cglt6] {
     display: flex;
     flex: 1;
     height: 50px;
@@ -105,7 +105,7 @@
     border-radius: 2%;
 }
 
-.send-comment-btn {
+.send-comment-btn[b-hxtk2cglt6] {
     margin-left: 5px;
     color: white;
     height: 50px;
@@ -114,11 +114,11 @@
     border: 2px thin;
 }
 
-    .send-comment-btn:hover {
+    .send-comment-btn:hover[b-hxtk2cglt6] {
         transform: scale(1.1)
     }
 
-.comments-wrapper {
+.comments-wrapper[b-hxtk2cglt6] {
     padding: 20px;
     height: auto;
     width: auto;
@@ -128,7 +128,7 @@
 
 /* --------------------------! Animations !-------------------------- */
 /* --------------------------! Topic Animation !-------------------------- */
-@keyframes topicAnimation {
+@keyframes topicAnimation-b-hxtk2cglt6 {
     0% {
         color: #ff0000;
         transform: rotate(360deg)

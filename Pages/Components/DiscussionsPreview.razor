@@ -23,7 +23,7 @@
         }
         else
         {
-            @foreach (ForumWars.Data.Topic discussion in discussions)
+            @foreach (ForumWars.Data.Discussion discussion in discussions)
             {
                 <div class="discussion-card" @onclick="() => RedirectToDiscussionPage(discussion.Id)">
                     <div class="discussion-header">
@@ -42,9 +42,9 @@
                         <span class="discussion-upvotes">🔥@discussion.UpVotes.ToString()</span>
                     </div>
                     <div class="discussion-body">
-                        @if (discussion.TopicText != null)
+                        @if (discussion.Description != null)
                         {
-                            @discussion.TopicText
+                            @discussion.Description
                             ;
                         }
                     </div>
@@ -55,21 +55,21 @@
 </div>
 
 @code {
-    List<ForumWars.Data.Topic>? discussions;
+    List<ForumWars.Data.Discussion>? discussions;
 
-    public TopicPreview()
+    protected override void OnInitialized()
     {
-        this.discussions = GetTopics();
+        this.discussions = GetDiscussions().Result;
+    }    
+
+    async Task <List<ForumWars.Data.Discussion>> GetDiscussions()
+    {
+        var api = new DiscussionsController();
+        return await api.GetDiscussionList();        
     }
 
-    List<ForumWars.Data.Topic> GetTopics()
+    public void RedirectToDiscussionPage(long idDiscussion)
     {
-        var api = new TopicsController();
-        return api.GetTopicList().Result;
-    }
-
-    public void RedirectToDiscussionPage(long idTopic)
-    {
-        NavManager.NavigateTo($"/topic/{idTopic}");
+        NavManager.NavigateTo($"/discussion/{idDiscussion}");
     }
 }

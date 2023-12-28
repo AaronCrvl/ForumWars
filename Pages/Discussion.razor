@@ -1,0 +1,72 @@
+﻿@page "/discussion/{idDiscussion}"
+@using ForumWars.Pages.Components
+
+<div class="discussion-page-wrapper">
+    @if (discussion == null && comments == null)
+    {
+        <div class="spinner-wrapper">
+            <div class="spinner"></div>
+        </div>
+    }
+    else
+    {
+        <div class="discussion-wrapper">
+            <div class="discussion-title-wrapper">
+                <div class="discussion-id">#@idDiscussion</div>
+                <div class="discussion-title">- @discussion.Title</div>
+                <div class="discussions">
+                    @if (discussion.CommunityTopics == null)
+                    {
+                        <span>No Community Topics for this Discussion.</span>
+                    }
+                    else
+                    {
+                        @foreach (var item in discussion.CommunityTopics)
+                        {
+                            <div class="discussion-discussions">@item</div>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="discussion-creation-info">
+                <span class="discussion-author">@discussion.Author</span>
+                <span class="discussion-creation-date">@discussion.CreationDate.ToShortDateString()</span>
+            </div>
+            <p class="discussion-text">@discussion.Description</p>
+        </div>
+
+        <div class="comment-section">
+            <span class="comments-section-title">Comments Section</span>
+            <div class="user-comment-section-wrapper">
+                <input class="user-comment" type="text" placeholder="Leave a comment on this discussion.👻" />
+                <button class="send-comment-btn" onclick="">Send Comment</button>
+            </div>
+
+            <div class="comments-wrapper">
+                @foreach (var item in comments)
+                {
+                    <TopicComment UserCommentProps=item></TopicComment>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string idDiscussion { get; set; }
+
+    // public Topic(string idTopic)
+    // {
+    //     this.idTopic = idTopic;
+    // }
+
+    public ForumWars.Data.Discussion? discussion;
+    public List<ForumWars.Data.Comment>? comments;
+
+    protected override void OnInitialized()
+    {
+        discussion = new ForumWars.Controllers.DiscussionsController().GetDiscussion(int.Parse(idDiscussion)).Result;
+        comments = new ForumWars.Controllers.DiscussionsController().GetDiscussionComments(int.Parse(idDiscussion)).Result;
+    }
+}

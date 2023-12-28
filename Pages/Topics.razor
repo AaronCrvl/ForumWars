@@ -1,0 +1,27 @@
+﻿@page "/topic/{topicTag}"
+@using MudBlazor
+@using ForumWars.Pages.Components
+@using ForumWars.Controllers
+
+<div class="new-discussion-page-wrapper">
+    <div class="content-wrapper">
+        <MudText Style="font-size:45px; font-weight:bold;">#@topicTag</MudText>
+    </div>
+</div>
+
+@code {
+    #region Properties
+    [Parameter]
+    public string topicTag { get; set; } = "";
+    private List<ForumWars.Data.Discussion> relatedDiscussions = new List<Data.Discussion>();
+    #endregion
+
+    #region Constructors
+
+    public Topics()
+    {
+        this.topicTag = topicTag;
+        this.relatedDiscussions = new DiscussionsController().GetRelatedDiscussions(topicTag).Result;
+    }
+    #endregion
+}

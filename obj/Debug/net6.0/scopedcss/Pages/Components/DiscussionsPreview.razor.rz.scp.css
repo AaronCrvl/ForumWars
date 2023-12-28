@@ -1,36 +1,36 @@
-.content[b-bhvzlr5gl0] {
+.content[b-b46wt2kpy7] {
     margin-top: 95px;
     max-width: 1580px;
 }
 
-.title[b-bhvzlr5gl0] {
+.title[b-b46wt2kpy7] {
     color: black;
     font-weight: bold;
     font-size: 70px;
     cursor: default;
 }
 
-    .title.dark-theme[b-bhvzlr5gl0] {
+    .title.dark-theme[b-b46wt2kpy7] {
         color: white;
     }
 
-.discussion-title[b-bhvzlr5gl0] {
+.discussion-title[b-b46wt2kpy7] {
     color: black;
     font-weight: bold;
     font-size: 50px;
     margin-right: 55px;
 }
 
-    .discussion-title.dark-theme[b-bhvzlr5gl0] {
+    .discussion-title.dark-theme[b-b46wt2kpy7] {
         color: white;
     }
 
-.discussions-wrapper[b-bhvzlr5gl0] {
+.discussions-wrapper[b-b46wt2kpy7] {
     margin-top: 25px;
     width: fit-content;
 }
 
-.discussion-card[b-bhvzlr5gl0] {
+.discussion-card[b-b46wt2kpy7] {
     padding: 60px;
     border-radius: 4%;
     margin-bottom: 35px;
@@ -40,18 +40,18 @@
     transition: ease-in-out 0.5s;
 }
 
-    .discussion-card:hover[b-bhvzlr5gl0] {
+    .discussion-card:hover[b-b46wt2kpy7] {
         opacity: 100%;
         cursor: pointer;
         transform: scale(1.1);
     }
 
-.discussion-header[b-bhvzlr5gl0] {
+.discussion-header[b-b46wt2kpy7] {
     gap: 20px;
     display: flex;
 }
 
-.topics[b-bhvzlr5gl0] {
+.topics[b-b46wt2kpy7] {
     margin-left: 15px;
     padding: 10px;
     border-radius: 20%;
@@ -61,26 +61,26 @@
     width: fit-content;
     background-color: gold;
     transition: ease-in-out;
-    animation: topicsShake-b-bhvzlr5gl0 2s normal infinite;
+    animation: topicsShake-b-b46wt2kpy7 2s normal infinite;
 }
 
-.discussion-upvotes[b-bhvzlr5gl0] {
+.discussion-upvotes[b-b46wt2kpy7] {
     font-weight: bold;
     font-size: 35px;
     margin-left: auto;
     transition: ease;
-    animation: fireShake-b-bhvzlr5gl0 4s backwards infinite;
+    animation: fireShake-b-b46wt2kpy7 4s backwards infinite;
 }
 
-.discussion-title[b-bhvzlr5gl0] {
+.discussion-title[b-b46wt2kpy7] {
     color: darkorange;
 }
 
-    .discussion-title.dark-theme[b-bhvzlr5gl0] {
+    .discussion-title.dark-theme[b-b46wt2kpy7] {
         color: purple;
     }
 
-.discussion-body[b-bhvzlr5gl0] {
+.discussion-body[b-b46wt2kpy7] {
     margin-top: 25px;
     font-size: 20px;
     font-weight: bold;
@@ -88,7 +88,7 @@
 
 /* --------------------------! Animations !-------------------------- */
 /* --------------------------! Fire Shake !-------------------------- */
-@keyframes fireShake-b-bhvzlr5gl0 {
+@keyframes fireShake-b-b46wt2kpy7 {
     0% {
         transform: rotate(25deg)
     }
@@ -143,7 +143,7 @@
 }
 
 /* --------------------------! Topics Shake !-------------------------- */
-@keyframes topicsShake-b-bhvzlr5gl0 {
+@keyframes topicsShake-b-b46wt2kpy7 {
     from {
         transform: scale(1.3);
     }

@@ -29,7 +29,7 @@
                     <div class="items-wrapper">
                     @if (searchResult != null)
                     {
-                        @foreach (ForumWars.Data.Topic topic in searchResult)
+                        @foreach (ForumWars.Data.Discussion topic in searchResult)
                         {
                             <div class="search-item">
                                 <div class="item-info">
@@ -61,8 +61,8 @@
     private string UpVotes { get; set; } = "";
     private DateTime initialDate { get; set; } = new DateTime();
     private DateTime finalDate { get; set; } = new DateTime();
-    private ForumWars.Controllers.TopicsController cTopic = new TopicsController();
-    private List<ForumWars.Data.Topic>? searchResult = new List<ForumWars.Data.Topic>();
+    private ForumWars.Controllers.DiscussionsController cTopic = new DiscussionsController();
+    private List<ForumWars.Data.Discussion>? searchResult = new List<ForumWars.Data.Discussion>();
 
     // public Search()
     // {
@@ -73,16 +73,16 @@
     {
         // Input Fields Validation for Search
         if(CurrentValue.Length > 3 && initialDate != new DateTime() && finalDate != new DateTime() && UpVotes.Length > 0)
-            searchResult = cTopic.SearchInTopicList(CurrentValue, int.Parse(UpVotes), initialDate, finalDate).Result;
+            searchResult = cTopic.SearchInDiscussionList(CurrentValue, int.Parse(UpVotes), initialDate, finalDate).Result;
         else if(CurrentValue.Length > 3 && UpVotes.Length > 0) 
-            searchResult = cTopic.SearchInTopicList("", int.Parse(UpVotes), new DateTime(), new DateTime()).Result;       
+            searchResult = cTopic.SearchInDiscussionList("", int.Parse(UpVotes), new DateTime(), new DateTime()).Result;       
         else if(UpVotes.Length > 0) 
-            searchResult = cTopic.SearchInTopicList("", int.Parse(UpVotes), new DateTime(), new DateTime()).Result;
+            searchResult = cTopic.SearchInDiscussionList("", int.Parse(UpVotes), new DateTime(), new DateTime()).Result;
         else if(CurrentValue.Length > 3) 
-            searchResult = cTopic.SearchInTopicList(CurrentValue, 0, new DateTime(), new DateTime()).Result;
+            searchResult = cTopic.SearchInDiscussionList(CurrentValue, 0, new DateTime(), new DateTime()).Result;
         else if(initialDate != new DateTime() && finalDate != new DateTime()) 
-            searchResult = cTopic.SearchInTopicList("", 0, initialDate, finalDate).Result;
+            searchResult = cTopic.SearchInDiscussionList("", 0, initialDate, finalDate).Result;
         else
-            searchResult = cTopic.GetTopicList().Result;
+            searchResult = cTopic.GetDiscussionList().Result;
     }
 }
