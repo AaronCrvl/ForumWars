@@ -645,13 +645,19 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     font-size: 25px;
     font-weight: bold;
 }
+
+.community-topics-wrapper[b-v6rgc89hgy] {
+    display: flex;
+}
+
 /*
 .error-list-wrapper {
     
 }
 */
 .error-list-items-wrapper[b-v6rgc89hgy] {
-    background-color: indianred;
+    /*background-color: indianred;*/
+    margin-bottom: 35px;
 }
 
 .inputs-wrapper[b-v6rgc89hgy] {
@@ -804,7 +810,7 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
     height: min-content;
 }
 /* _content/ForumWars/Pages/Topics.razor.rz.scp.css */
-.page-wrapper[b-x6hfk339lg] {
+.topic-page-wrapper[b-x6hfk339lg] {
     height: 100vh;
     width: 100%;
     color: black;
@@ -814,6 +820,66 @@ body > div.page > div.content-wrapper > div > div > div > div > div > div:nth-ch
 .content-wrapper[b-x6hfk339lg] {
     padding: 10px;
     margin-top: 85px;
+}
+
+.search-item[b-x6hfk339lg] {
+    flex: 1;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 2%;
+    border: darkkhaki 2px solid;
+    transition: 0.2s ease-in-out;
+    transform: scale(0.9);
+}
+
+    .search-item:hover[b-x6hfk339lg] {
+        background-color: darkkhaki;
+        border: 0px;
+        cursor: pointer;
+        transform: scale(1);
+    }
+
+.item-info[b-x6hfk339lg] {
+    padding: 2px;
+    display: flex;
+    height: min-content;
+    width: stretch;
+}
+
+.item-hour[b-x6hfk339lg] {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+}
+
+.item-upvotes[b-x6hfk339lg] {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+    margin-left: auto;
+    text-align: right;
+}
+
+.topic[b-x6hfk339lg] {
+    border: orangered 2px thin;
+    background-color: orange;
+    color: white;
+    padding: 3px;
+    transform: scale(0.9);
+    border-radius: 5%;
+    width: stretch;
+}
+
+.item-title[b-x6hfk339lg] {
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+}
+
+.discussion-topics[b-x6hfk339lg] {
+    display: flex;
+    width: min-content;
+    height: min-content;
 }
 /* _content/ForumWars/Pages/User.razor.rz.scp.css */
 .topic-page-wrapper[b-0243gdpe19] {

@@ -60,6 +60,7 @@
     protected override void OnInitialized()
     {
         this.discussions = GetDiscussions().Result;
+        this.discussions = this.discussions.OrderByDescending(x => x.CreationDate).OrderByDescending(x => x.UpVotes).Take(5).ToList();
     }    
 
     async Task <List<ForumWars.Data.Discussion>> GetDiscussions()

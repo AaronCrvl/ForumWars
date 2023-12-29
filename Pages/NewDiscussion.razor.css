@@ -16,13 +16,19 @@
     font-size: 25px;
     font-weight: bold;
 }
+
+.community-topics-wrapper {
+    display: flex;
+}
+
 /*
 .error-list-wrapper {
     
 }
 */
 .error-list-items-wrapper {
-    background-color: indianred;
+    /*background-color: indianred;*/
+    margin-bottom: 35px;
 }
 
 .inputs-wrapper {

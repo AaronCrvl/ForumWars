@@ -4,16 +4,51 @@
 <div class="new-discussion-page-wrapper">
     <div class="content-wrapper">
         <MudText class="page-title" Style="font-size:45px; font-weight:bold; margin-bottom: 35px;">Create a New Discussion</MudText>
-        <MudTextField @bind-Value="@Title" Label="Title" Variant="Variant.Outlined" Margin="Margin.Dense" OnInternalInputChanged="(e)=> { Title=(string)e.Value; ValidateFields(); }" />
-        <MudTextField @bind-Value="@Description" Label="Description" Variant="Variant.Outlined" Margin="Margin.Dense" />
-        <MudAlert @bind-Value="@InputTopic" Label="Related Topics" Variant="Variant.Outlined" Margin="Margin.Dense" />
+
+        @* Inputs *@
+        <MudTextField 
+            @bind-Value="@Title"
+            Label="Title"
+            Variant="Variant.Outlined"
+            Margin="Margin.Dense"
+            OnInternalInputChanged="ValidateFields" 
+        />
+        <MudTextField 
+            @bind-Value="@Description"
+            Label="Description"
+            Variant="Variant.Outlined"
+            Margin="Margin.Dense"
+            OnInternalInputChanged="ValidateFields" 
+        />
+        <div class="community-topics-wrapper">
+            <MudTextField 
+                @bind-Value="@InputTopic"
+                InputType="InputType.Text"
+                Label="Related Topics"
+                Variant="Variant.Outlined"
+                Margin="Margin.Dense" 
+            />
+
+            <MudButton 
+                Variant="Variant.Filled" 
+                ButtonType="ButtonType.Submit"
+                Icon="@Icons.Material.Filled.Add"
+                DisableElevation="true" 
+                OnClick="Reset"
+            >
+                Insert Topic
+            </MudButton>
+        </div>
+
+        @* Preview *@
         <div class="d-flex align-end justify-space-between mud-width-full" style="margin-top:25px; margin-bottom:25px;">
             <div class="d-flex flex-column">
+                <MudText Style="font-size:15px; color:black; font-weight:bolder; font-size:20px;">Preview</MudText>
                 <MudText><b>Title:</b> @Title</MudText>
                 <MudText><b>Description:</b> @Description</MudText>
                 <MudText><b>InputTopic:</b>@InputTopic</MudText>
             </div>
-            <MudButton Variant="Variant.Filled" DisableElevation="true" OnClick="Reset">Reset Model</MudButton>
+            <MudButton Variant="Variant.Filled" DisableElevation="true" ButtonType="ButtonType.Reset" OnClick="Reset">Reset Model</MudButton>
         </div>
 
         @if (isTyping)
@@ -26,28 +61,36 @@
             </div>
         }
 
+        @* Validations  *@
+        <hr class="divisor" />
         @if (InputError)
         {
             <div class="error-list-wrapper">
-                <MudText Style="font-size:15px; color:white;">❌❗ Error List</MudText>
+                <MudText Style="font-size:15px; color:Red; font-weight:bolder; font-size:20px;">❗ Error List</MudText>
                 <ul class="error-list-items-wrapper">
-                    @foreach (string error in ErrorList)
+                    @foreach (string error in this.ErrorList)
                     {
-                        <MudAlert Severity="Severity.Error" class="error-list-item">@error</MudAlert>
+                        <MudAlert Severity="Severity.Warning" Style="margin-bottom:15px;" class="error-list-item">@error</MudAlert>
                     }
                 </ul>
             </div>
-        }       
+        }
 
-        @if (!isDataValidated)
+        <hr class="divisor" />
+        <MudText Style="font-size:15px; color:black; font-weight:bolder; font-size:20px;">Info</MudText>
+        @if (string.IsNullOrEmpty(Title) && string.IsNullOrEmpty(Description))
         {
             <MudAlert Severity="Severity.Normal">Enter data for validation.</MudAlert>
         }
-        else
+
+        @if (isDataValidated)
         {
             <MudAlert Severity="Severity.Success">All good here, try to create this discussion for the word to comment on it.</MudAlert>
         }
-        <MudButton Style="font-size:25px; font-weight:bold;">🧧Create</MudButton>
+
+        @* Create Btn *@
+        <hr class="divisor" />
+        <MudButton Style="font-size:25px; font-weight:bold; align-items:right; justify-items:right;">🧧Create</MudButton>
     </div>
 </div>
 
@@ -64,7 +107,18 @@
     private bool isDataValidated { get; set; } = false;
     // Animations Control
     private bool isTyping { get; set; } = false;
+
+    List<string> validationRules = new List<string> {
+            "The title must have more then five letters.",
+            "The description must have more then twenty letters.",
+            "The discussion must have at least one topic."
+        };
     #endregion
+
+    public NewDiscussion()
+    {
+        this.ErrorList = this.validationRules;
+    }
 
     #region Methods
     public void Reset()
@@ -76,32 +130,26 @@
 
     public void ValidateFields()
     {
-        isTyping = true;
-
-        var validationRules = new List<string> {
-            "The title must have more then five letters.",
-            "The description must have more then twenty letters.",
-            "The discussion must have at least one topic."
-        };
+        this.isTyping = true;
 
         // Validation Rules Check
-        if (Title.Length < 5 && !ErrorList.Contains(validationRules[0]))
-            ErrorList.Add(validationRules[0]);
-        else if (ErrorList.Contains(validationRules[0]))
-            ErrorList.Remove(validationRules[0]);
+        if (Title.Length < 5 && !this.ErrorList.Contains(validationRules[0]))
+            this.ErrorList.Add(validationRules[0]);
+        else if (this.ErrorList.Contains(validationRules[0]))
+            this.ErrorList.Remove(validationRules[0]);
 
-        if (Description.Length < 20 && !ErrorList.Contains(validationRules[1]))
-            ErrorList.Add(validationRules[1]);
-        else if (ErrorList.Contains(validationRules[1]))
-            ErrorList.Remove(validationRules[1]);
+        if (Description.Length < 20 && !this.ErrorList.Contains(validationRules[1]))
+            this.ErrorList.Add(validationRules[1]);
+        else if (this.ErrorList.Contains(validationRules[1]))
+            this.ErrorList.Remove(validationRules[1]);
 
-        if (InputTopic.Count() > 1 && !ErrorList.Contains(validationRules[2]))
-            ErrorList.Add(validationRules[2]);
-        else if (ErrorList.Contains(validationRules[2]))
-            ErrorList.Remove(validationRules[2]);
+        if (InputTopic.Count() > 1 && !this.ErrorList.Contains(validationRules[2]))
+            this.ErrorList.Add(validationRules[2]);
+        else if (this.ErrorList.Contains(validationRules[2]))
+            this.ErrorList.Remove(validationRules[2]);
 
-        InputError = ErrorList.Count > 1;
-        isDataValidated = ErrorList.Count() == 0;
+        this.InputError = ErrorList.Count > 1;
+        this.isDataValidated = ErrorList.Count() == 0;
     }
     #endregion
 }

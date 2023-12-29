@@ -16,13 +16,19 @@
     font-size: 25px;
     font-weight: bold;
 }
+
+.community-topics-wrapper[b-v6rgc89hgy] {
+    display: flex;
+}
+
 /*
 .error-list-wrapper {
     
 }
 */
 .error-list-items-wrapper[b-v6rgc89hgy] {
-    background-color: indianred;
+    /*background-color: indianred;*/
+    margin-bottom: 35px;
 }
 
 .inputs-wrapper[b-v6rgc89hgy] {

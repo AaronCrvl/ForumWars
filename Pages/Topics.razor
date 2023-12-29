@@ -3,9 +3,37 @@
 @using ForumWars.Pages.Components
 @using ForumWars.Controllers
 
-<div class="new-discussion-page-wrapper">
+<div class="topic-page-wrapper">
     <div class="content-wrapper">
         <MudText Style="font-size:45px; font-weight:bold;">#@topicTag</MudText>
+        @if (this.relatedDiscussions.Count() > 0)
+        {
+            @foreach (ForumWars.Data.Discussion topic in relatedDiscussions)
+            {
+                <div class="search-item">
+                    <div class="item-info">
+                        <span class="item-title">@topic.Title - </span>
+                        <span class="item-hour">@topic.CreationDate.ToShortDateString()</span>
+                        <span class="item-upvotes">🔥@topic.UpVotes</span>
+                    </div>
+                    <div class="discussion-topics">
+                        @if (topic.CommunityTopics != null)
+                        {
+                            @foreach (var item in topic.CommunityTopics)
+                            {
+                                <div class="topic">@item</div>
+                            }
+                        }
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div>
+                <MudText Style="font-size:25px; font-weight:bold;">No discussions for this topic.</MudText>
+            </div>
+        }
     </div>
 </div>
 
@@ -17,8 +45,7 @@
     #endregion
 
     #region Constructors
-
-    public Topics()
+    protected override void OnInitialized()
     {
         this.topicTag = topicTag;
         this.relatedDiscussions = new DiscussionsController().GetRelatedDiscussions(topicTag).Result;
