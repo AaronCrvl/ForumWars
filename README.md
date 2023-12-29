@@ -27,4 +27,5 @@ This project is being made using the Blazor Server App of the .NET platform. Bla
 
 
 ## 📣 Live
-https://github.com/AaronCrvl/ForumWars/assets/72924198/340ad176-e5a4-489b-a68d-fabba1894fee
+https://github.com/AaronCrvl/ForumWars/assets/72924198/85dac048-3172-4630-b88d-2894c4c1ebbb
+
