@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ForumWars.Data;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace ForumWars.Controllers
 {
@@ -13,7 +14,7 @@ namespace ForumWars.Controllers
             {
                 Id = 0,
                 Author = "MikeDice24555",
-                CreationDate = new DateTime(2023, 11, 05, 08, 20, 32, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Comedy Shows In Your Town",
                 UpVotes = 541,
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -23,7 +24,7 @@ namespace ForumWars.Controllers
             {
                 Id = 1,
                 Author = "77SupraRider",
-                CreationDate = new DateTime(2023, 12, 25, 12, 0, 32, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Best vehicles on offroad category",
                 UpVotes = 155,
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -33,7 +34,7 @@ namespace ForumWars.Controllers
             {
                 Id = 2,
                 Author = "MikeDice24555",
-                CreationDate = new DateTime(2023, 08, 06, 15, 45, 02, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Why start with NextJS ?",
                 UpVotes = 115,
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -43,7 +44,7 @@ namespace ForumWars.Controllers
             {
                 Id = 3,
                 Author = "__AnotherAlien",
-                CreationDate = new DateTime(2023, 12, 12, 08, 12, 27, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Invincible Season 2",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 UpVotes = 189,
@@ -53,7 +54,7 @@ namespace ForumWars.Controllers
             {
                 Id = 4,
                 Author = "StupidDreams",
-                CreationDate = new DateTime(2023, 11, 29, 01, 15, 07, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = ".NET Blazor Server",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ ".NET", ".NET Core" },
@@ -63,7 +64,7 @@ namespace ForumWars.Controllers
             {
                 Id = 5,
                 Author = "Katie__AA5556",
-                CreationDate = new DateTime(2023, 12, 29, 20, 35, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Cooking for myself, a great experience!",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Food", "Cooking" },
@@ -73,7 +74,7 @@ namespace ForumWars.Controllers
             {
                 Id = 6,
                 Author = "user415522",
-                CreationDate = new DateTime(2023, 12, 20, 07, 55, 37, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "New Salmon Receipt!",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Food", "Cooking", "Kitchen"},
@@ -83,7 +84,7 @@ namespace ForumWars.Controllers
             {
                 Id = 7,
                 Author = "MikeDice24555",
-                CreationDate = new DateTime(2023, 12, 17, 21, 15, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Leet Code - A New Way To Prepare Yourself",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Development", "LeetCode" },
@@ -93,7 +94,7 @@ namespace ForumWars.Controllers
             {
                 Id = 8,
                 Author = "MudBoy",
-                CreationDate = new DateTime(2023, 12, 29, 20, 35, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "How long we'll wait until GTA VI drop?",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Games", "GTAVI" },
@@ -103,7 +104,7 @@ namespace ForumWars.Controllers
             {
                 Id = 9,
                 Author = "Ratzzzzzz",
-                CreationDate = new DateTime(2023, 12, 29, 20, 35, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Global Temparature Warning",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Health", "Global", "News", "World" },
@@ -113,7 +114,7 @@ namespace ForumWars.Controllers
             {
                 Id = 10,
                 Author = "TwidyLongWay_444444",
-                CreationDate = new DateTime(2023, 12, 10, 11, 20, 05, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Best Movies To Watch In 2023",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Movies", "Cinema" },
@@ -123,7 +124,7 @@ namespace ForumWars.Controllers
             {
                 Id = 11,
                 Author = "Ratzzzzzz",
-                CreationDate = new DateTime(2023, 12, 29, 20, 35, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "WW3 is here?",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "War", "Global", "News", "World" },
@@ -133,7 +134,7 @@ namespace ForumWars.Controllers
             {
                 Id = 12,
                 Author = "444pGameboy",
-                CreationDate = new DateTime(2023, 12, 02, 19, 35, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "The Minecraft Franchise - All Games",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Games", "Minecraft"},
@@ -143,7 +144,7 @@ namespace ForumWars.Controllers
             {
                 Id = 13,
                 Author = "MadRaza",
-                CreationDate = new DateTime(2023, 12, 10, 20, 11, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Watch Dogs - Cyberpsycho",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Games", "Release"},
@@ -153,7 +154,7 @@ namespace ForumWars.Controllers
             {
                 Id = 14,
                 Author = "444pGameboy",
-                CreationDate = new DateTime(2023, 12, 29, 20, 46, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Resindent Evil Team Next Move",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Games" },
@@ -163,7 +164,7 @@ namespace ForumWars.Controllers
             {
                 Id = 15,
                 Author = "GlobalNww",
-                CreationDate = new DateTime(2023, 12, 29, 20, 46, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "ASpecies at Risk of Extinction",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "News", "Nature" },
@@ -173,7 +174,7 @@ namespace ForumWars.Controllers
             {
                 Id = 16,
                 Author = "GlobalNww",
-                CreationDate = new DateTime(2023, 12, 29, 20, 46, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Global Warming - Update",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Games" },
@@ -183,7 +184,7 @@ namespace ForumWars.Controllers
             {
                 Id = 17,
                 Author = "444pGameboy",
-                CreationDate = new DateTime(2023, 12, 29, 20, 46, 00, DateTimeKind.Local),
+                CreationDate = RandomDay(),
                 Title = "Resindent Evil Team Next Move",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
                 CommunityTopics = new List<string>{ "Games" },
@@ -302,10 +303,17 @@ namespace ForumWars.Controllers
          */
         private static DateTime RandomDay()
         {
-            Random gen = new Random();
-            DateTime start = new DateTime(1995, 1, 1);
-            int range = (DateTime.Today - start).Days;
-            return start.AddDays(gen.Next(range));
+            DateTime startDate = new DateTime(2023, 1, 1);
+            DateTime endDate = new DateTime(2023, 12, 31);
+
+            // Use ticks from the current system time as a seed
+            long seed = DateTime.Now.Ticks;
+            Random random = new Random((int)(seed & 0xFFFFFFFFL) | (int)(seed >> 32));
+
+            int range = (endDate - startDate).Days;
+            int randomDays = random.Next(range);
+
+            return startDate.AddDays(randomDays);
         }
         #endregion              
     }
